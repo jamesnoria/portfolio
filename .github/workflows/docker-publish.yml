@@ -26,6 +26,7 @@ jobs:
 
   update-lxc:
     runs-on: ubuntu-latest
+    needs: dockerhub-publish
     steps:
       - name: Set up tailscale
         uses: tailscale/github-action@v2
