@@ -180,7 +180,7 @@ const workExperiences = {
       ]
     },
     {
-      role: "Software Engineer",
+      role: "Mid Software Engineer",
       company: "BBVA",
       companylogo: require("./assets/images/logo_bbva.jpg"),
       date: "Jul 2022 – Sep 2022",

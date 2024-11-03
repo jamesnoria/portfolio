@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  docker-publish:
+  dockerhub-publish:
     runs-on: ubuntu-latest
     steps:
       - name: Set up QEMU
@@ -23,3 +23,29 @@ jobs:
         with:
           push: true
           tags: jnoriadev/portfolio:latest
+
+  update-lxc:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up tailscale
+        uses: tailscale/github-action@v2
+        with:
+          oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
+          oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
+          tags: tag:ci
+
+      - name: Install sshpass
+        run: |
+          sudo apt-get update && sudo apt-get install -y sshpass
+
+      - name: Update LXC
+        env:
+          SSH_USER: ${{ secrets.USERNAME }}
+          SSH_HOST: ${{ secrets.HOST }}
+          SSH_PASS: ${{ secrets.PASSWORD }}
+        run: |
+          sshpass -p "$SSH_PASS" ssh -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" '
+            docker-compose pull
+            docker-compose up -d --remove-orphans
+            docker image prune -f
+          '
