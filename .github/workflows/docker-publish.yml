@@ -13,8 +13,10 @@ jobs:
           oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
           oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
           tags: tag:ci
+      - name: Check Tailscale IP
+        run: tailscale ip
       - name: ssh to server to create a file
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@v0.1.6
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
