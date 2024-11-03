@@ -15,11 +15,16 @@ jobs:
           tags: tag:ci
       - name: Check Tailscale IP
         run: tailscale ip
-      - name: ssh to server to create a file
-        uses: appleboy/ssh-action@v0.1.6
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.SSH_KEY }}
-          script: |
-            echo "Hello World" > hello.txt
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ secrets.HOST }} >> ~/.ssh/known_hosts
+
+      - name: SSH to server and create a file
+        env:
+          SSH_USER: ${{ secrets.USERNAME }}
+          SSH_HOST: ${{ secrets.HOST }}
+        run: |
+          ssh -i ~/.ssh/id_rsa "$SSH_USER@$SSH_HOST" 'echo "Hello World" > hello.txt'
