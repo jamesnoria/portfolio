@@ -13,18 +13,42 @@ jobs:
           oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
           oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
           tags: tag:ci
-      - name: Check Tailscale IP
-        run: tailscale ip
-      - name: Set up SSH
+
+      - name: Verificar IP de Tailscale
         run: |
+          echo "Mostrando IP de Tailscale..."
+          tailscale ip
+
+      - name: Configurar SSH
+        run: |
+          echo "Creando directorio .ssh..."
           mkdir -p ~/.ssh
+
+          echo "Guardando la clave SSH en id_rsa..."
           echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa
+
+          echo "Aplicando permisos 600 a la clave SSH..."
           chmod 600 ~/.ssh/id_rsa
+
+          echo "Añadiendo ${HOST} a known_hosts..."
           ssh-keyscan -H ${{ secrets.HOST }} >> ~/.ssh/known_hosts
 
-      - name: SSH to server and create a file
+          echo "Contenido de known_hosts:"
+          cat ~/.ssh/known_hosts
+
+      - name: Probar conexión SSH
         env:
           SSH_USER: ${{ secrets.USERNAME }}
           SSH_HOST: ${{ secrets.HOST }}
         run: |
-          ssh -i ~/.ssh/id_rsa "$SSH_USER@$SSH_HOST" 'echo "Hello World" > hello.txt'
+          echo "Intentando conexión SSH con $SSH_USER@$SSH_HOST..."
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" 'echo "Conexión SSH exitosa"'
+
+      - name: Crear archivo en el servidor
+        env:
+          SSH_USER: ${{ secrets.USERNAME }}
+          SSH_HOST: ${{ secrets.HOST }}
+        run: |
+          echo "Creando archivo hello.txt en el servidor..."
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" 'echo "Hello World" > hello.txt'
+          echo "Archivo creado exitosamente en el servidor."
