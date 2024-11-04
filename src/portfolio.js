@@ -108,7 +108,7 @@ const skillsSection = {
 // Education Section
 
 const educationInfo = {
-  display: true, // Set false to hide this section, defaults to true
+  display: false, // Set false to hide this section, defaults to true
   schools: [
     {
       schoolName: "UDH",
@@ -190,7 +190,7 @@ const workExperiences = {
       role: "Software Developer",
       company: "Copstone",
       companylogo: require("./assets/images/copstone-logo.jpg"),
-      date: "Ago 2020 – Jul 2022",
+      date: "Aug 2020 – Jul 2022",
       desc: "Executed effective migrations to AWS, utilizing Lambda, API Gateway, IAM, SES, and DynamoDB to support scalable, cloud-based architectures."
     },
   ]
