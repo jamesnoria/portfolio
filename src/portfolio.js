@@ -23,10 +23,10 @@ const greeting = {
   username: "James Noria",
   title: "Hi all, I'm James Noria",
   subTitle: emoji(
-    "A passionate full-stack developer dedicated to crafting innovative software solutions that drive success. With a keen focus on scalability and excellence, I thrive on solving complex challenges to deliver impactful results."
+    "Backend Developer with 5+ years of experience delivering scalable solutions, optimizing performance, and driving impactful results in dynamic environments."
   ),
   resumeLink:
-    "https://drive.google.com/file/d/19pGvx-gj6ddCtqTOF1Yrj3IU8QGlC3zs/view?usp=sharing", // Set to empty to hide the button
+    "https://drive.google.com/file/d/1gZXjhkeDUdOrLEswBtb0EO3QLZZYigff/view?usp=sharing", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -49,57 +49,101 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "DRIVEN FULL STACK DEVELOPER PASSIONATE ABOUT SCALABLE CLOUD SOLUTIONS",
+  subTitle:
+    "DRIVEN BACKEND DEVELOPER PASSIONATE ABOUT SCALABLE, CLOUD-NATIVE SOLUTIONS",
   skills: [
-    emoji("⚡ Build and optimize scalable backend services and data workflows"),
-    emoji("⚡ Design interactive, responsive front-end interfaces for web applications"),
-    emoji("⚡ Implement and maintain cloud-based architectures using AWS services")
+    emoji("💻 Build and optimize scalable, high-performance backend systems"),
+    emoji(
+      "📊 Design and enhance data workflows for efficient processing and storage"
+    ),
+    emoji(
+      "☁️ Architect and maintain secure, cloud-native solutions using modern practices"
+    ),
+    emoji(
+      "🔄 Streamline deployments with automated CI/CD pipelines and containerization"
+    )
   ],
 
   softwareSkills: [
     {
-      skillName: "html-5",
-      fontAwesomeClassname: "fab fa-html5"
+      skillName: "Javascript",
+      fontAwesomeClassname: "skill-icons:javascript"
     },
     {
-      skillName: "css3",
-      fontAwesomeClassname: "fab fa-css3-alt"
+      skillName: "NodeJs",
+      fontAwesomeClassname: "skill-icons:nodejs-dark"
     },
     {
-      skillName: "JavaScript",
-      fontAwesomeClassname: "fab fa-js"
+      skillName: "Typescript",
+      fontAwesomeClassname: "skill-icons:typescript"
     },
     {
-      skillName: "reactjs",
-      fontAwesomeClassname: "fab fa-react"
+      skillName: "NestJS",
+      fontAwesomeClassname: "skill-icons:nestjs-dark"
     },
     {
-      skillName: "nodejs",
-      fontAwesomeClassname: "fab fa-node"
+      skillName: "Express",
+      fontAwesomeClassname: "skill-icons:expressjs-dark"
     },
     {
-      skillName: "npm",
-      fontAwesomeClassname: "fab fa-npm"
+      skillName: "Python",
+      fontAwesomeClassname: "skill-icons:python-dark"
     },
     {
-      skillName: "sql-database",
-      fontAwesomeClassname: "fas fa-database"
+      skillName: "Django",
+      fontAwesomeClassname: "skill-icons:django"
     },
     {
-      skillName: "aws",
-      fontAwesomeClassname: "fab fa-aws"
+      skillName: "Java",
+      fontAwesomeClassname: "skill-icons:java-dark"
     },
     {
-      skillName: "python",
-      fontAwesomeClassname: "fab fa-python"
+      skillName: "Bash",
+      fontAwesomeClassname: "skill-icons:bash-dark"
     },
     {
-      skillName: "docker",
-      fontAwesomeClassname: "fab fa-docker"
+      skillName: "GraphQL",
+      fontAwesomeClassname: "skill-icons:graphql-dark"
     },
     {
-      skillName: "cloudflare",
-      fontAwesomeClassname: "fab fa-cloudflare"
+      skillName: "Linux",
+      fontAwesomeClassname: "skill-icons:linux-dark"
+    },
+    {
+      skillName: "AWS",
+      fontAwesomeClassname: "skill-icons:aws-dark"
+    },
+    {
+      skillName: "Docker",
+      fontAwesomeClassname: "skill-icons:docker"
+    },
+    {
+      skillName: "Kubernetes",
+      fontAwesomeClassname: "skill-icons:kubernetes"
+    },
+    {
+      skillName: "Gitlab CI/CD",
+      fontAwesomeClassname: "skill-icons:gitlab-dark"
+    },
+    {
+      skillName: "Github Actions",
+      fontAwesomeClassname: "skill-icons:githubactions-dark"
+    },
+    {
+      skillName: "Jenkins",
+      fontAwesomeClassname: "skill-icons:jenkins-dark"
+    },
+    {
+      skillName: "PostgreSQL",
+      fontAwesomeClassname: "skill-icons:postgresql-dark"
+    },
+    {
+      skillName: "DynamoDB",
+      fontAwesomeClassname: "skill-icons:dynamodb-dark"
+    },
+    {
+      skillName: "MySQL",
+      fontAwesomeClassname: "skill-icons:mysql-dark"
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -116,10 +160,8 @@ const educationInfo = {
       subHeader: "Bachelor of Science in Computer Science",
       // duration: "September 2017 - April 2019",
       // desc: "Participated in the research of XXX and published 3 papers.",
-      descBullets: [
-        "Top 5 students",
-      ]
-    },
+      descBullets: ["Top 5 students"]
+    }
     // {
     //   schoolName: "Stanford University",
     //   logo: require("./assets/images/stanfordLogo.png"),
@@ -137,16 +179,16 @@ const techStack = {
   viewSkillBars: true, //Set it to true to show Proficiency Section
   experience: [
     {
-      Stack: "Frontend/Design", //Insert stack or technology you have experience in
-      progressPercentage: "50%" //Insert relative proficiency in percentage
-    },
-    {
-      Stack: "Backend",
-      progressPercentage: "90%"
-    },
-    {
       Stack: "Programming",
-      progressPercentage: "70%"
+      progressPercentage: "85%" // Strong foundation in multiple languages like JavaScript, Python, and Java
+    },
+    {
+      Stack: "Cloud/DevOps",
+      progressPercentage: "80%" // Skilled in AWS services, CI/CD automation, Docker, and Kubernetes
+    },
+    {
+      Stack: "Databases",
+      progressPercentage: "75%" // Proficient in PostgreSQL, DynamoDB, MySQL, and Oracle
     }
   ],
   displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
@@ -192,7 +234,7 @@ const workExperiences = {
       companylogo: require("./assets/images/copstone-logo.jpg"),
       date: "Aug 2020 – Jul 2022",
       desc: "Executed effective migrations to AWS, utilizing Lambda, API Gateway, IAM, SES, and DynamoDB to support scalable, cloud-based architectures."
-    },
+    }
   ]
 };
 
