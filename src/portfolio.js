@@ -197,43 +197,55 @@ const techStack = {
 // Work experience section
 
 const workExperiences = {
-  display: true, //Set it to true to show workExperiences Section
+  display: true, // Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Senior Software Engineer",
+      role: "Backend Developer Expert",
       company: "Rimac Seguros y Reaseguros",
       companylogo: require("./assets/images/rimac-logo.png"),
-      date: "Oct 2023 - Present",
-      // desc: "Experienced backend developer skilled in scalable solutions for large-scale platforms, cloud architectures, and efficient API and data management.",
+      date: "Oct 2023 – Present",
       descBullets: [
-        "Developed scalable backend services and optimized data workflows with API/database integrations, ensuring seamless data flow and integrity.",
-        "Enhanced AWS infrastructure, reducing costs, boosting scalability, and improving system monitoring for increased uptime and faster incident response."
+        "Designed and implemented backend services for the Estar Bien platform, boosting system scalability and reliability.",
+        "Optimized response times by 30% through serverless solutions in AWS.",
+        "Automated CI/CD pipelines, reducing production errors and deployment time by 40%.",
+        "Migrated critical data to PostgreSQL, improving query performance and ensuring data integrity."
       ]
     },
     {
-      role: "Senior Full Stack Engineer",
-      company: "La Positiva",
-      companylogo: require("./assets/images/lapositiva-logo.jpg"),
-      date: "Sep 2022 – Oct 2023",
-      // desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      role: "Senior Backend Developer",
+      company: "Tata Consultancy Services",
+      companylogo: require("./assets/images/tcs-logo.jpg"),
+      date: "Sep 2022 – Sep 2023",
       descBullets: [
-        "Developed REST and SOAP services for seamless cloud (AWS) and on-premise integration, enhancing data exchange and service interoperability",
-        "Built scalable backend and responsive front-end features, leveraging AWS and Kubernetes to streamline deployments and boost production resilience."
+        "Reduced integration latency by 25% through REST/SOAP service integrations in hybrid cloud environments.",
+        "Increased system availability with Kubernetes-based solutions for microservices deployment.",
+        "Developed scalable services using Node.js, Java, and Python, optimizing relational databases like Oracle and PostgreSQL.",
+        "Streamlined workflows with AWS Step Functions, enhancing automation for critical business operations."
       ]
     },
     {
-      role: "Mid Software Engineer",
-      company: "BBVA",
-      companylogo: require("./assets/images/logo_bbva.jpg"),
-      date: "Jul 2022 – Sep 2022",
-      desc: "Contract backend developer with expertise in API development and maintenance, leveraging AWS for scalable, efficient solutions. Proficient in both JavaScript and Python, applying best practices in behavior-driven development to enhance code quality and functionality."
-    },
-    {
-      role: "Software Developer",
+      role: "Backend Developer",
       company: "Copstone",
       companylogo: require("./assets/images/copstone-logo.jpg"),
-      date: "Aug 2020 – Jul 2022",
-      desc: "Executed effective migrations to AWS, utilizing Lambda, API Gateway, IAM, SES, and DynamoDB to support scalable, cloud-based architectures."
+      date: "Sep 2020 – Sep 2022",
+      descBullets: [
+        "Achieved 35% cost savings by migrating legacy systems to AWS.",
+        "Accelerated deployment times by 50% through optimized GitLab CI/CD pipelines.",
+        "Engineered microservices using Node.js and TypeScript, enabling seamless data integration for SMB projects.",
+        "Secured user data by designing robust authentication and authorization workflows."
+      ]
+    },
+    {
+      role: "Web Developer",
+      company: "Freelance IT Services",
+      companylogo: require("./assets/images/freelance.jpg"),
+      date: "Jan 2020 – Jul 2022",
+      descBullets: [
+        "Delivered custom full-stack solutions using ReactJS, Node.js, and Django for diverse client needs.",
+        "Implemented MVC and serverless architectures for small to medium-sized projects, boosting efficiency and adaptability.",
+        "Automated key workflows with AWS Lambda, reducing operational costs significantly.",
+        "Enhanced code quality and maintainability through TypeScript adoption."
+      ]
     }
   ]
 };

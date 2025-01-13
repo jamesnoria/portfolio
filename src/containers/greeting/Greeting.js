@@ -47,7 +47,7 @@ export default function Greeting() {
                 {greeting.resumeLink && (
                   <Button
                     text="Download my resume"
-                    href="https://drive.google.com/uc?export=download&id=19pGvx-gj6ddCtqTOF1Yrj3IU8QGlC3zs"
+                    href="https://drive.google.com/uc?export=download&id=1gZXjhkeDUdOrLEswBtb0EO3QLZZYigff"
                     download="Resume.pdf"
                     umamiEvent="download resume button"
                     className="download-link-button"
