@@ -1,33 +1,37 @@
-# This file is the main docker file configurations
+# 🏗️ Etapa de construcción
+FROM node:20-alpine AS builder
 
-# Official Node JS runtime as a parent image
-FROM node:20.0-alpine
-
-# Set the working directory to ./app
 WORKDIR /app
 
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
-COPY package.json ./
-
+# Instalar Git (si es necesario)
 RUN apk add --no-cache git
 
-# Install any needed packages
-RUN npm install
+# Copiar package.json y package-lock.json para aprovechar la caché
+COPY package.json package-lock.json ./
 
-# Audit fix npm packages
-RUN npm audit fix
+# Instalar TODAS las dependencias (incluyendo devDependencies)
+RUN npm ci
 
-# Bundle app source
-COPY . /app
+# Copiar el código fuente
+COPY . .
 
+# Ejecutar el build
 RUN npm run build
 
-RUN npm install -g serve
+# 🏠 Etapa final (sin devDependencies)
+FROM node:20-alpine AS runner
 
-# Make port 3000 available to the world outside this container
+WORKDIR /app
+
+# Copiar solo el resultado del build y dependencias necesarias
+COPY --from=builder /app/build ./build
+COPY --from=builder /app/package.json /app/package-lock.json ./
+
+# Instalar SOLO dependencias de producción
+RUN npm ci --omit=dev && \
+    npm cache clean --force
+
+# Instalar serve solo en producción
+RUN npm install serve@latest --only=production
+
 EXPOSE 3000
-
-# Run app.js when the container launches
-CMD ["serve", "-s", "build", "-l", "3000"]
