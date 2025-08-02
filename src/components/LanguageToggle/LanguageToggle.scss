@@ -96,3 +96,70 @@
 .dark-mode .flag-emoji {
   color: $textColorDark;
 }
+
+/* Mobile improvements */
+@media (max-width: 768px) {
+  .language-switch {
+    width: 45px;
+    height: 24px;
+    margin-left: 8px;
+  }
+  
+  .language-slider::before {
+    height: 24px;
+    width: 26px;
+  }
+  
+  .language-switch input:checked + .language-slider::before,
+  .language-switch input:checked + .language-slider > .flag-emoji {
+    -webkit-transform: translateX(21px);
+    -ms-transform: translateX(21px);
+    transform: translateX(21px);
+  }
+  
+  .language-switch input:checked + .language-slider > .flag-emoji {
+    -webkit-transform: translateY(-50%) translateX(21px);
+    -ms-transform: translateY(-50%) translateX(21px);
+    transform: translateY(-50%) translateX(21px);
+  }
+  
+  .flag-emoji {
+    font-size: 11px;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .language-switch {
+    width: 40px;
+    height: 22px;
+    margin-left: 6px;
+  }
+  
+  .language-slider::before {
+    height: 22px;
+    width: 24px;
+  }
+  
+  .language-switch input:checked + .language-slider::before,
+  .language-switch input:checked + .language-slider > .flag-emoji {
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+  }
+  
+  .language-switch input:checked + .language-slider > .flag-emoji {
+    -webkit-transform: translateY(-50%) translateX(18px);
+    -ms-transform: translateY(-50%) translateX(18px);
+    transform: translateY(-50%) translateX(18px);
+  }
+  
+  .flag-emoji {
+    font-size: 10px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+  }
+}

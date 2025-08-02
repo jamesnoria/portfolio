@@ -28,3 +28,41 @@
 .subTitle {
   color: $subTitle;
 }
+
+/* Global mobile improvements */
+@media (max-width: 768px) {
+  .main {
+    width: 95% !important;
+    padding: 15px 5px !important;
+  }
+  
+  /* Improve text readability on mobile */
+  .subTitle {
+    line-height: 1.5;
+  }
+  
+  /* Ensure no horizontal scroll */
+  body {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    width: 98% !important;
+    padding: 10px 3px !important;
+    margin-top: 2rem !important;
+  }
+  
+  /* Adjust font sizes for very small screens */
+  .App-header {
+    font-size: calc(0.5rem + 1.5vmin);
+  }
+}
+
+@media (max-width: 320px) {
+  .main {
+    width: 100% !important;
+    padding: 8px 2px !important;
+  }
+}

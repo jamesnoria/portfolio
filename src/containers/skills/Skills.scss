@@ -34,31 +34,62 @@
     font-size: 40px;
   }
 }
+
 @media (max-width: 768px) {
   .skills-heading {
     font-size: 30px;
     text-align: center;
+    margin-bottom: 20px;
   }
-  .greeting-text-p {
-    font-size: 16px;
-    line-height: normal;
-  }
-  .skills-main-div {
-    flex-direction: column;
-  }
-  .skills-text-div {
-    margin-left: 0px;
-    margin: 20px;
-  }
-  .skills-text {
-    font-size: 16px;
-  }
+  
   .skills-text-subtitle {
     font-size: 16px;
     text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.4;
   }
+  
+  .skills-main-div {
+    flex-direction: column;
+  }
+  
+  .skills-text-div {
+    margin-left: 0px;
+    margin: 20px;
+    order: 1;
+  }
+  
+  .skills-text {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
   .skills-image-div {
-    /* display: none; */
     order: 2;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-heading {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .skills-text-subtitle {
+    font-size: 14px;
+    padding: 0 15px;
+  }
+  
+  .skills-text-div {
+    margin: 15px;
+  }
+  
+  .skills-text {
+    font-size: 14px;
+    margin-bottom: 12px;
+    padding: 0 10px;
   }
 }

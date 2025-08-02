@@ -99,29 +99,80 @@
     font-size: 20px;
   }
 }
+
 @media (max-width: 768px) {
   .button-greeting-div {
-    justify-content: space-around;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
   }
+  
   .greeting-text {
     font-size: 30px;
     text-align: center;
   }
+  
   .greeting-text-p {
     font-size: 16px;
-    line-height: normal;
+    line-height: 1.4;
     text-align: center;
+    margin: 20px 0;
   }
+  
   .greeting-main {
     display: block;
+    text-align: center;
   }
+  
   .greeting-image-div {
     height: 256px;
+    margin-bottom: 30px;
+  }
+  
+  .main-button {
+    margin-right: 0 !important;
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .greeting-text {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+  
+  .greeting-text-p {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+  
+  .greet-main {
+    width: 95%;
+    padding: 15px 5px;
+  }
+  
+  .button-greeting-div {
+    gap: 12px;
+  }
+  
+  .main-button {
+    font-size: 0.85rem;
+    padding: 10px 16px;
   }
 }
 
 @media (max-width: 320px) {
   .main {
     width: auto;
+  }
+  
+  .greeting-text {
+    font-size: 20px;
+  }
+  
+  .greeting-text-p {
+    font-size: 13px;
   }
 }

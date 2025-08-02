@@ -58,13 +58,66 @@
 @media (max-width: 768px) {
   .skills-container {
     flex-direction: column;
+    width: 95%;
+    padding: 15px 10px;
   }
+  
   .skills-bar {
     line-height: 3rem;
-    margin: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 400px;
   }
+  
+  .skills-heading {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .skill {
+    margin-bottom: 25px;
+  }
+  
+  .skill p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .meter {
+    height: 18px;
+  }
+  
   .skills-image {
     display: none;
-    order: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-container {
+    width: 98%;
+    padding: 10px 5px;
+  }
+  
+  .skills-bar {
+    margin: 15px auto;
+    line-height: 2.5rem;
+    width: 95%;
+    max-width: 350px;
+  }
+  
+  .skills-heading {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+  
+  .skill p {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .meter {
+    height: 16px;
   }
 }
