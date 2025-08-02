@@ -23,7 +23,7 @@ const greeting = {
   username: "James Noria",
   title: "Hi all, I'm James Noria",
   subTitle: emoji(
-    "Backend Developer with 5+ years of experience delivering scalable solutions, optimizing performance, and driving impactful results in dynamic environments."
+    "Backend Developer with 6+ years of experience delivering scalable solutions, optimizing performance, and driving impactful results in dynamic environments."
   ),
   resumeLink:
     "https://drive.google.com/file/d/1gZXjhkeDUdOrLEswBtb0EO3QLZZYigff/view?usp=sharing", // Set to empty to hide the button
@@ -200,7 +200,7 @@ const workExperiences = {
   display: true, // Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Backend Developer Expert",
+      role: "Tech Lead",
       company: "Rimac Seguros y Reaseguros",
       companylogo: require("./assets/images/rimac-logo.png"),
       date: "Oct 2023 – Present",
