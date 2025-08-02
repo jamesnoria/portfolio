@@ -1,0 +1,126 @@
+@import "../../_globalColor";
+
+.language-notification {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 9999;
+  max-width: 300px;
+  background: $lightBackground1;
+  border: 1px solid $buttonColor;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  animation: slideInRight 0.5s ease-out;
+}
+
+.notification-content {
+  display: flex;
+  align-items: flex-start;
+  padding: 12px;
+  gap: 10px;
+}
+
+.notification-icon {
+  font-size: 20px;
+  margin-top: 2px;
+}
+
+.notification-text {
+  flex: 1;
+}
+
+.notification-text p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: $textColor;
+}
+
+.notification-close {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: $textColor;
+  cursor: pointer;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.notification-close:hover {
+  background: rgba(0,0,0,0.1);
+}
+
+/* Dark mode styles */
+.dark-mode .language-notification {
+  background: $darkBackground;
+  border-color: $buttonColor;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.dark-mode .notification-text p {
+  color: $textColorDark;
+}
+
+.dark-mode .notification-close {
+  color: $textColorDark;
+}
+
+.dark-mode .notification-close:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* Animation */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .language-notification {
+    top: 70px;
+    right: 15px;
+    left: 15px;
+    max-width: none;
+  }
+  
+  .notification-content {
+    padding: 10px;
+  }
+  
+  .notification-text p {
+    font-size: 13px;
+  }
+  
+  .notification-icon {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .language-notification {
+    top: 60px;
+    right: 10px;
+    left: 10px;
+  }
+  
+  .notification-content {
+    padding: 8px;
+  }
+  
+  .notification-text p {
+    font-size: 12px;
+  }
+}
