@@ -76,3 +76,24 @@ jobs:
             docker compose up -d --remove-orphans
             docker image prune -f
           '
+
+      - name: Send Telegram notification
+        if: success()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          MESSAGE="✅ Portfolio deployment successful!
+
+          📦 Repository: ${{ github.repository }}
+          🌿 Branch: ${{ github.ref_name }}
+          📋 Commit: ${{ github.sha }}
+          👤 Author: ${{ github.actor }}
+          🚀 Deployment completed successfully
+
+          View at: https://portfolio.jamesnoria.com"
+
+          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            -d chat_id="${TELEGRAM_CHAT_ID}" \
+            -d text="${MESSAGE}" \
+            -d parse_mode="Markdown"
