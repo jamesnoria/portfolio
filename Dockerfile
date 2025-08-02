@@ -23,6 +23,9 @@ FROM node:20-alpine AS runner
 
 WORKDIR /app
 
+# Instalar wget para health checks
+RUN apk add --no-cache wget
+
 # Copiar solo el resultado del build y dependencias necesarias
 COPY --from=builder /app/build ./build
 COPY --from=builder /app/package.json /app/package-lock.json ./
@@ -35,3 +38,6 @@ RUN npm ci --omit=dev && \
 RUN npm install serve@latest --only=production
 
 EXPOSE 3000
+
+# Comando para servir la aplicación
+CMD ["npx", "serve", "-s", "build", "-l", "3000"]
