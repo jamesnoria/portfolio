@@ -7,10 +7,11 @@ WORKDIR /app
 RUN apk add --no-cache git
 
 # Copiar package.json y package-lock.json para aprovechar la caché
-COPY package.json package-lock.json ./
+COPY package*.json ./
 
 # Instalar TODAS las dependencias (incluyendo devDependencies)
-RUN npm ci
+RUN npm ci --only=production --ignore-scripts && \
+    npm ci --only=development --ignore-scripts
 
 # Copiar el código fuente
 COPY . .
@@ -23,21 +24,14 @@ FROM node:20-alpine AS runner
 
 WORKDIR /app
 
-# Instalar wget para health checks
-RUN apk add --no-cache wget
+# Instalar wget para health checks y serve en una sola capa
+RUN apk add --no-cache wget && \
+    npm install -g serve@latest
 
-# Copiar solo el resultado del build y dependencias necesarias
+# Copiar solo el resultado del build
 COPY --from=builder /app/build ./build
-COPY --from=builder /app/package.json /app/package-lock.json ./
-
-# Instalar SOLO dependencias de producción
-RUN npm ci --omit=dev && \
-    npm cache clean --force
-
-# Instalar serve solo en producción
-RUN npm install serve@latest --only=production
 
 EXPOSE 3000
 
 # Comando para servir la aplicación
-CMD ["npx", "serve", "-s", "build", "-l", "3000"]
+CMD ["serve", "-s", "build", "-l", "3000"]
