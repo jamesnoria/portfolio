@@ -1,0 +1,129 @@
+@import "../../_globalColor";
+
+.resume-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  backdrop-filter: blur(4px);
+}
+
+.resume-modal {
+  background: $lightBackground1;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  min-width: 320px;
+  text-align: center;
+  color: $textColor;
+  transform: scale(0.9);
+  animation: modalAppear 0.3s ease-out forwards;
+}
+
+.resume-modal.dark-modal {
+  background: $darkBackground;
+  color: $textColorDark;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+}
+
+@keyframes modalAppear {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.resume-modal h3 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-family: inherit;
+}
+
+.resume-options {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.resume-btn {
+  background: $buttonColor;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  min-width: 100px;
+  display: inline-block;
+  font-family: inherit;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.resume-btn:hover {
+  background: darken($buttonColor, 10%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  color: white;
+}
+
+.close-btn {
+  background: transparent;
+  border: 2px solid $buttonColor;
+  color: $buttonColor;
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.close-btn:hover {
+  background: $buttonColor;
+  color: white;
+}
+
+.dark-modal .close-btn {
+  border-color: $buttonColor;
+  color: $buttonColor;
+}
+
+.dark-modal .close-btn:hover {
+  background: $buttonColor;
+  color: white;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .resume-modal {
+    margin: 1rem;
+    min-width: calc(100vw - 2rem);
+    padding: 1.5rem;
+  }
+  
+  .resume-options {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .resume-btn {
+    width: 100%;
+  }
+}

@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, useState} from "react";
 import Headroom from "react-headroom";
 import "./Header.scss";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
@@ -13,9 +13,11 @@ import {
   achievementSection,
   resumeSection
 } from "../../portfolio";
+import ResumeModal from "./ResumeModal";
 
 function Header() {
   const {isDark} = useContext(StyleContext);
+  const [showResumeModal, setShowResumeModal] = useState(false);
   const viewExperience = workExperiences.display;
   const viewOpenSource = openSource.display;
   const viewSkills = skillsSection.display;
@@ -77,7 +79,9 @@ function Header() {
           )} */}
           {viewResume && (
             <li>
-              <a href="#resume" data-umami-event="resume tab">Resume</a>
+              <button className="resume-popup-btn" onClick={() => setShowResumeModal(true)}>
+                Resume
+              </button>
             </li>
           )}
           <li>
@@ -90,6 +94,14 @@ function Header() {
             </a>
           </li>
         </ul>
+        <ResumeModal
+          show={showResumeModal}
+          onClose={() => setShowResumeModal(false)}
+          resumeLinks={{
+            spanish: "https://drive.google.com/file/d/1gZXjhkeDUdOrLEswBtb0EO3QLZZYigff/view?usp=sharing", // Replace with Spanish resume link
+            english: "https://drive.google.com/file/d/1gZXjhkeDUdOrLEswBtb0EO3QLZZYigff/view?usp=sharing"  // Replace with English resume link
+          }}
+        />
       </header>
     </Headroom>
   );

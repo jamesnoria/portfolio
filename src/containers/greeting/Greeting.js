@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, useState} from "react";
 import {Fade} from "react-reveal";
 import emoji from "react-easy-emoji";
 import "./Greeting.scss";
@@ -6,11 +6,19 @@ import landingPerson from "../../assets/lottie/landingPerson";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
+import ResumeModal from "../../components/header/ResumeModal";
 import {illustration, greeting} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function Greeting() {
   const {isDark} = useContext(StyleContext);
+  const [showResumeModal, setShowResumeModal] = useState(false);
+  
+  const resumeLinks = {
+    spanish: "https://drive.google.com/file/d/1gZXjhkeDUdOrLEswBtb0EO3QLZZYigff/view?usp=sharing", // Replace with Spanish resume link
+    english: "https://drive.google.com/file/d/1gZXjhkeDUdOrLEswBtb0EO3QLZZYigff/view?usp=sharing"  // Replace with English resume link
+  };
+
   if (!greeting.displayGreeting) {
     return null;
   }
@@ -47,8 +55,7 @@ export default function Greeting() {
                 {greeting.resumeLink && (
                   <Button
                     text="Download my resume"
-                    href="https://drive.google.com/uc?export=download&id=1gZXjhkeDUdOrLEswBtb0EO3QLZZYigff"
-                    download="Resume.pdf"
+                    onClick={() => setShowResumeModal(true)}
                     umamiEvent="download resume button"
                     className="download-link-button"
                   />
@@ -67,6 +74,11 @@ export default function Greeting() {
             )}
           </div>
         </div>
+        <ResumeModal
+          show={showResumeModal}
+          onClose={() => setShowResumeModal(false)}
+          resumeLinks={resumeLinks}
+        />
       </div>
     </Fade>
   );

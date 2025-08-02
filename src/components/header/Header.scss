@@ -50,6 +50,33 @@
   background-color: $headerHoverBG;
 }
 
+/* Resume button styling to match nav links */
+.resume-popup-btn {
+  display: block;
+  padding: 15px 20px;
+  color: $textColor;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+  font-family: inherit;
+  width: 100%;
+  text-align: left;
+}
+
+.resume-popup-btn:hover {
+  background-color: $headerHoverBG;
+}
+
+.dark-menu .resume-popup-btn {
+  color: $textColorDark !important;
+}
+
+.dark-menu .resume-popup-btn:hover {
+  background-color: $buttonColor !important;
+}
+
 .header .logo {
   display: block;
   flex: none;
