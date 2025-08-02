@@ -1,9 +1,28 @@
 @import "./globalColor";
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .App {
   text-align: center;
   width: 100%;
   overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
 }
 
 .App-logo {
