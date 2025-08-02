@@ -2,7 +2,10 @@ import React, {useContext, useState} from "react";
 import Headroom from "react-headroom";
 import "./Header.scss";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
+import LanguageToggle from "../LanguageToggle/LanguageToggle";
 import StyleContext from "../../contexts/StyleContext";
+import LanguageContext from "../../contexts/LanguageContext";
+import {useTranslation} from "../../utils/translations";
 import {
   greeting,
   workExperiences,
@@ -17,13 +20,18 @@ import ResumeModal from "./ResumeModal";
 
 function Header() {
   const {isDark} = useContext(StyleContext);
+  const {isSpanish} = useContext(LanguageContext);
+  const {t} = useTranslation(isSpanish);
   const [showResumeModal, setShowResumeModal] = useState(false);
+  
+  const resumeLinks = {
+    spanish: "https://drive.google.com/file/d/1gZXjhkeDUdOrLEswBtb0EO3QLZZYigff/view?usp=sharing", // Replace with Spanish resume link
+    english: "https://drive.google.com/file/d/1gZXjhkeDUdOrLEswBtb0EO3QLZZYigff/view?usp=sharing"  // Replace with English resume link
+  };
+  
   const viewExperience = workExperiences.display;
-  const viewOpenSource = openSource.display;
   const viewSkills = skillsSection.display;
   const viewAchievement = achievementSection.display;
-  const viewBlog = blogSection.display;
-  const viewTalks = talkSection.display;
   const viewResume = resumeSection.display;
 
   return (
@@ -46,51 +54,37 @@ function Header() {
           {viewSkills && (
             <li>
               <a href="#skills" data-umami-event="skills tab">
-                Skills
+                {t('skills')}
               </a>
             </li>
           )}
           {viewExperience && (
             <li>
               <a href="#experience" data-umami-event="experience tab">
-                Work Experiences
+                {t('workExperiences')}
               </a>
             </li>
           )}
-          {/* {viewOpenSource && (
-            <li>
-              <a href="#opensource">Open Source</a>
-            </li>
-          )} */}
           {viewAchievement && (
             <li>
               <a href="#achievements">Achievements</a>
             </li>
           )}
-          {/* {viewBlog && (
-            <li>
-              <a href="#blogs">Blogs</a>
-            </li>
-          )}
-          {viewTalks && (
-            <li>
-              <a href="#talks">Talks</a>
-            </li>
-          )} */}
           {viewResume && (
             <li>
               <button className="resume-popup-btn" onClick={() => setShowResumeModal(true)}>
-                Resume
+                {t('resume')}
               </button>
             </li>
           )}
           <li>
-            <a href="#contact" data-umami-event="contact me tab">Contact Me</a>
+            <a href="#contact" data-umami-event="contact me tab">{t('contactMe')}</a>
           </li>
           <li>
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <a>
+            <a className="toggle-container">
               <ToggleSwitch />
+              <LanguageToggle />
             </a>
           </li>
         </ul>

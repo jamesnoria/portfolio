@@ -3,6 +3,8 @@ import "./Project.scss";
 import Button from "../../components/button/Button";
 import {openSource, socialMediaLinks} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
+import LanguageContext from "../../contexts/LanguageContext";
+import {getText} from "../../utils/translations";
 import Loading from "../../containers/loading/Loading";
 export default function Projects() {
   const GithubRepoCard = lazy(() =>
@@ -13,6 +15,7 @@ export default function Projects() {
   const [repo, setrepo] = useState([]);
   // todo: remove useContex because is not supported
   const {isDark} = useContext(StyleContext);
+  const {isSpanish} = useContext(LanguageContext);
 
   useEffect(() => {
     const getRepoData = () => {
@@ -46,7 +49,7 @@ export default function Projects() {
     return (
       <Suspense fallback={renderLoader()}>
         <div className="main" id="opensource">
-          <h1 className="project-title">Open Source Projects</h1>
+          <h1 className="project-title">{getText(openSource.title, isSpanish)}</h1>
           <div className="repo-cards-div-main">
             {repo.map((v, i) => {
               if (!v) {

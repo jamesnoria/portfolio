@@ -21,10 +21,18 @@ const illustration = {
 
 const greeting = {
   username: "James Noria",
-  title: "Hi all, I'm James Noria",
-  subTitle: emoji(
-    "Backend Developer with 6+ years of experience delivering scalable solutions, optimizing performance, and driving impactful results in dynamic environments."
-  ),
+  title: {
+    en: "Hi all, I'm James Noria",
+    es: "Hola a todos, soy James Noria"
+  },
+  subTitle: {
+    en: emoji(
+      "Backend Developer with 6+ years of experience delivering scalable solutions, optimizing performance, and driving impactful results in dynamic environments."
+    ),
+    es: emoji(
+      "Desarrollador Backend con más de 6 años de experiencia entregando soluciones escalables, optimizando rendimiento y generando resultados impactantes en entornos dinámicos."
+    )
+  },
   resumeLink:
     "https://drive.google.com/file/d/1gZXjhkeDUdOrLEswBtb0EO3QLZZYigff/view?usp=sharing", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
@@ -48,21 +56,40 @@ const socialMediaLinks = {
 // Skills Section
 
 const skillsSection = {
-  title: "What I do",
-  subTitle:
-    "DRIVEN BACKEND DEVELOPER PASSIONATE ABOUT SCALABLE, CLOUD-NATIVE SOLUTIONS",
-  skills: [
-    emoji("💻 Build and optimize scalable, high-performance backend systems"),
-    emoji(
-      "📊 Design and enhance data workflows for efficient processing and storage"
-    ),
-    emoji(
-      "☁️ Architect and maintain secure, cloud-native solutions using modern practices"
-    ),
-    emoji(
-      "🔄 Streamline deployments with automated CI/CD pipelines and containerization"
-    )
-  ],
+  title: {
+    en: "What I do",
+    es: "Lo que hago"
+  },
+  subTitle: {
+    en: "DRIVEN BACKEND DEVELOPER PASSIONATE ABOUT SCALABLE, CLOUD-NATIVE SOLUTIONS",
+    es: "DESARROLLADOR BACKEND APASIONADO POR SOLUCIONES ESCALABLES Y NATIVAS DE LA NUBE"
+  },
+  skills: {
+    en: [
+      emoji("💻 Build and optimize scalable, high-performance backend systems"),
+      emoji(
+        "📊 Design and enhance data workflows for efficient processing and storage"
+      ),
+      emoji(
+        "☁️ Architect and maintain secure, cloud-native solutions using modern practices"
+      ),
+      emoji(
+        "🔄 Streamline deployments with automated CI/CD pipelines and containerization"
+      )
+    ],
+    es: [
+      emoji("💻 Construir y optimizar sistemas backend escalables y de alto rendimiento"),
+      emoji(
+        "📊 Diseñar y mejorar flujos de trabajo de datos para procesamiento y almacenamiento eficientes"
+      ),
+      emoji(
+        "☁️ Arquitecturar y mantener soluciones seguras y nativas de la nube usando prácticas modernas"
+      ),
+      emoji(
+        "🔄 Optimizar despliegues con pipelines de CI/CD automatizados y contenerización"
+      )
+    ]
+  },
 
   softwareSkills: [
     {
@@ -153,6 +180,14 @@ const skillsSection = {
 
 const educationInfo = {
   display: false, // Set false to hide this section, defaults to true
+  title: {
+    en: "Education",
+    es: "Educación"
+  },
+  subtitle: {
+    en: "Basic Qualification and Certifications",
+    es: "Calificaciones Básicas y Certificaciones"
+  },
   schools: [
     {
       schoolName: "UDH",
@@ -177,17 +212,30 @@ const educationInfo = {
 
 const techStack = {
   viewSkillBars: true, //Set it to true to show Proficiency Section
+  title: {
+    en: "Expertise",
+    es: "Experiencia"
+  },
   experience: [
     {
-      Stack: "Programming",
+      Stack: {
+        en: "Programming",
+        es: "Programación"
+      },
       progressPercentage: "85%" // Strong foundation in multiple languages like JavaScript, Python, and Java
     },
     {
-      Stack: "Cloud/DevOps",
+      Stack: {
+        en: "Cloud/DevOps",
+        es: "Nube/DevOps"
+      },
       progressPercentage: "80%" // Skilled in AWS services, CI/CD automation, Docker, and Kubernetes
     },
     {
-      Stack: "Databases",
+      Stack: {
+        en: "Databases",
+        es: "Bases de Datos"
+      },
       progressPercentage: "75%" // Proficient in PostgreSQL, DynamoDB, MySQL, and Oracle
     }
   ],
@@ -198,54 +246,118 @@ const techStack = {
 
 const workExperiences = {
   display: true, // Set it to true to show workExperiences Section
+  title: {
+    en: "Experience",
+    es: "Experiencia"
+  },
+  subtitle: {
+    en: "My work experience as a software engineer and working on diverse projects",
+    es: "Mi experiencia laboral como ingeniero de software trabajando en diversos proyectos"
+  },
   experience: [
     {
-      role: "Tech Lead",
+      role: {
+        en: "Tech Lead",
+        es: "Líder Técnico"
+      },
       company: "Rimac Seguros y Reaseguros",
       companylogo: require("./assets/images/rimac-logo.png"),
-      date: "Oct 2023 – Present",
-      descBullets: [
-        "Designed and implemented backend services for the Estar Bien platform, boosting system scalability and reliability.",
-        "Optimized response times by 30% through serverless solutions in AWS.",
-        "Automated CI/CD pipelines, reducing production errors and deployment time by 40%.",
-        "Migrated critical data to PostgreSQL, improving query performance and ensuring data integrity."
-      ]
+      date: {
+        en: "Oct 2023 – Present",
+        es: "Oct 2023 – Presente"
+      },
+      descBullets: {
+        en: [
+          "Designed and implemented backend services for the Estar Bien platform, boosting system scalability and reliability.",
+          "Optimized response times by 30% through serverless solutions in AWS.",
+          "Automated CI/CD pipelines, reducing production errors and deployment time by 40%.",
+          "Migrated critical data to PostgreSQL, improving query performance and ensuring data integrity."
+        ],
+        es: [
+          "Diseñé e implementé servicios backend para la plataforma Estar Bien, mejorando la escalabilidad y confiabilidad del sistema.",
+          "Optimicé los tiempos de respuesta en un 30% mediante soluciones serverless en AWS.",
+          "Automaticé pipelines de CI/CD, reduciendo errores de producción y tiempo de despliegue en un 40%.",
+          "Migré datos críticos a PostgreSQL, mejorando el rendimiento de consultas y asegurando la integridad de datos."
+        ]
+      }
     },
     {
-      role: "Senior Backend Developer",
+      role: {
+        en: "Senior Backend Developer",
+        es: "Desarrollador Backend Senior"
+      },
       company: "Tata Consultancy Services",
       companylogo: require("./assets/images/tcs-logo.jpg"),
-      date: "Sep 2022 – Sep 2023",
-      descBullets: [
-        "Reduced integration latency by 25% through REST/SOAP service integrations in hybrid cloud environments.",
-        "Increased system availability with Kubernetes-based solutions for microservices deployment.",
-        "Developed scalable services using Node.js, Java, and Python, optimizing relational databases like Oracle and PostgreSQL.",
-        "Streamlined workflows with AWS Step Functions, enhancing automation for critical business operations."
-      ]
+      date: {
+        en: "Sep 2022 – Sep 2023",
+        es: "Sep 2022 – Sep 2023"
+      },
+      descBullets: {
+        en: [
+          "Reduced integration latency by 25% through REST/SOAP service integrations in hybrid cloud environments.",
+          "Increased system availability with Kubernetes-based solutions for microservices deployment.",
+          "Developed scalable services using Node.js, Java, and Python, optimizing relational databases like Oracle and PostgreSQL.",
+          "Streamlined workflows with AWS Step Functions, enhancing automation for critical business operations."
+        ],
+        es: [
+          "Reduje la latencia de integración en un 25% mediante integraciones de servicios REST/SOAP en entornos de nube híbrida.",
+          "Aumenté la disponibilidad del sistema con soluciones basadas en Kubernetes para el despliegue de microservicios.",
+          "Desarrollé servicios escalables usando Node.js, Java y Python, optimizando bases de datos relacionales como Oracle y PostgreSQL.",
+          "Optimicé flujos de trabajo con AWS Step Functions, mejorando la automatización para operaciones comerciales críticas."
+        ]
+      }
     },
     {
-      role: "Backend Developer",
+      role: {
+        en: "Backend Developer",
+        es: "Desarrollador Backend"
+      },
       company: "Copstone",
       companylogo: require("./assets/images/copstone-logo.jpg"),
-      date: "Sep 2020 – Sep 2022",
-      descBullets: [
-        "Achieved 35% cost savings by migrating legacy systems to AWS.",
-        "Accelerated deployment times by 50% through optimized GitLab CI/CD pipelines.",
-        "Engineered microservices using Node.js and TypeScript, enabling seamless data integration for SMB projects.",
-        "Secured user data by designing robust authentication and authorization workflows."
-      ]
+      date: {
+        en: "Sep 2020 – Sep 2022",
+        es: "Sep 2020 – Sep 2022"
+      },
+      descBullets: {
+        en: [
+          "Achieved 35% cost savings by migrating legacy systems to AWS.",
+          "Accelerated deployment times by 50% through optimized GitLab CI/CD pipelines.",
+          "Engineered microservices using Node.js and TypeScript, enabling seamless data integration for SMB projects.",
+          "Secured user data by designing robust authentication and authorization workflows."
+        ],
+        es: [
+          "Logré un ahorro de costos del 35% migrando sistemas legacy a AWS.",
+          "Aceleré los tiempos de despliegue en un 50% mediante pipelines optimizados de GitLab CI/CD.",
+          "Diseñé microservicios usando Node.js y TypeScript, permitiendo integración de datos sin problemas para proyectos SMB.",
+          "Aseguré datos de usuarios diseñando flujos de trabajo robustos de autenticación y autorización."
+        ]
+      }
     },
     {
-      role: "Web Developer",
+      role: {
+        en: "Web Developer",
+        es: "Desarrollador Web"
+      },
       company: "Freelance IT Services",
       companylogo: require("./assets/images/freelance.jpg"),
-      date: "Jan 2020 – Jul 2022",
-      descBullets: [
-        "Delivered custom full-stack solutions using ReactJS, Node.js, and Django for diverse client needs.",
-        "Implemented MVC and serverless architectures for small to medium-sized projects, boosting efficiency and adaptability.",
-        "Automated key workflows with AWS Lambda, reducing operational costs significantly.",
-        "Enhanced code quality and maintainability through TypeScript adoption."
-      ]
+      date: {
+        en: "Jan 2020 – Jul 2022",
+        es: "Ene 2020 – Jul 2022"
+      },
+      descBullets: {
+        en: [
+          "Delivered custom full-stack solutions using ReactJS, Node.js, and Django for diverse client needs.",
+          "Implemented MVC and serverless architectures for small to medium-sized projects, boosting efficiency and adaptability.",
+          "Automated key workflows with AWS Lambda, reducing operational costs significantly.",
+          "Enhanced code quality and maintainability through TypeScript adoption."
+        ],
+        es: [
+          "Entregué soluciones full-stack personalizadas usando ReactJS, Node.js y Django para diversas necesidades de clientes.",
+          "Implementé arquitecturas MVC y serverless para proyectos de pequeña a mediana escala, mejorando eficiencia y adaptabilidad.",
+          "Automaticé flujos de trabajo clave con AWS Lambda, reduciendo significativamente los costos operacionales.",
+          "Mejoré la calidad del código y mantenibilidad mediante la adopción de TypeScript."
+        ]
+      }
     }
   ]
 };
@@ -254,6 +366,14 @@ const workExperiences = {
 To know how to get github key look at readme.md */
 
 const openSource = {
+  title: {
+    en: "Open Source Projects",
+    es: "Proyectos de Código Abierto"
+  },
+  subtitle: {
+    en: "My projects make use of a vast variety of latest technology tools.",
+    es: "Mis proyectos hacen uso de una gran variedad de las últimas herramientas tecnológicas."
+  },
   showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
   display: false // Set false to hide this section, defaults to true
 };
@@ -261,8 +381,14 @@ const openSource = {
 // Some big projects you have worked on
 
 const bigProjects = {
-  title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  title: {
+    en: "Big Projects",
+    es: "Grandes Proyectos"
+  },
+  subtitle: {
+    en: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+    es: "ALGUNAS STARTUPS Y COMPAÑÍAS A LAS QUE AYUDÉ A CREAR SU TECNOLOGÍA"
+  },
   projects: [
     {
       image: require("./assets/images/saayaHealthLogo.webp"),
@@ -295,9 +421,14 @@ const bigProjects = {
 // Include certificates, talks etc
 
 const achievementSection = {
-  title: emoji("Achievements And Certifications 🏆 "),
-  subtitle:
-    "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !",
+  title: {
+    en: emoji("Achievements And Certifications 🏆 "),
+    es: emoji("Logros Y Certificaciones 🏆 ")
+  },
+  subtitle: {
+    en: "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !",
+    es: "Logros, Certificaciones, Cartas de Premios y Algunas Cosas Geniales que he hecho !"
+  },
 
   achievementsCards: [
     {
@@ -418,9 +549,14 @@ const resumeSection = {
 };
 
 const contactInfo = {
-  title: emoji("Contact Me 📬"),
-  subtitle:
-    "Interested in discussing a project or simply connecting? My inbox is open and I look forward to hearing from you.",
+  title: {
+    en: emoji("Contact Me 📬"),
+    es: emoji("Contáctame 📬")
+  },
+  subtitle: {
+    en: "Interested in discussing a project or simply connecting? My inbox is open and I look forward to hearing from you.",
+    es: "¿Interesado en discutir un proyecto o simplemente conectar? Mi bandeja de entrada está abierta y espero saber de ti."
+  },
   number: "+92-0000000000",
   email_address: "contact@jamesnoria.com"
 };

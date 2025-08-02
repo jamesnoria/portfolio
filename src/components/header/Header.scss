@@ -77,6 +77,12 @@
   background-color: $buttonColor !important;
 }
 
+.toggle-container {
+  display: flex !important;
+  align-items: center;
+  gap: 5px;
+}
+
 .header .logo {
   display: block;
   flex: none;

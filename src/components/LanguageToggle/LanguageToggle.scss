@@ -1,0 +1,98 @@
+@import "../../_globalColor";
+
+.language-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+  margin-left: 10px;
+}
+
+/* Fix visible slider checkbox */
+.language-switch input {
+  transform: scale(0.5);
+}
+
+.language-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $toggleSwitchSliderBG;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.language-slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 28px;
+  left: 0;
+  bottom: 0;
+  background-color: $textColorDark;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.language-switch input:checked + .language-slider {
+  background-color: $toggleCheck;
+}
+
+.language-switch input:focus + .language-slider {
+  box-shadow: $toggleCheck;
+}
+
+.language-switch input:checked + .language-slider::before,
+.language-switch input:checked + .language-slider > .flag-emoji {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Round sliders */
+.language-slider.round {
+  border-radius: 34px;
+}
+
+.language-slider.round::before {
+  border-radius: 50%;
+}
+
+.flag-emoji {
+  position: absolute;
+  color: $textColorDark;
+  font-size: 12px;
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.language-switch input:checked + .language-slider > .flag-emoji {
+  -webkit-transform: translateY(-50%) translateX(26px);
+  -ms-transform: translateY(-50%) translateX(26px);
+  transform: translateY(-50%) translateX(26px);
+}
+
+/* Dark mode adjustments */
+.dark-mode .language-slider {
+  background-color: $darkBackground;
+}
+
+.dark-mode .language-slider::before {
+  background-color: $lightBackground1;
+}
+
+.dark-mode .flag-emoji {
+  color: $textColorDark;
+}

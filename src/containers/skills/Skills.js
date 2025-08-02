@@ -6,9 +6,13 @@ import {Fade} from "react-reveal";
 import codingPerson from "../../assets/lottie/codingPerson";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import StyleContext from "../../contexts/StyleContext";
+import LanguageContext from "../../contexts/LanguageContext";
+import {getText} from "../../utils/translations";
 
 export default function Skills() {
   const {isDark} = useContext(StyleContext);
+  const {isSpanish} = useContext(LanguageContext);
+  
   if (!skillsSection.display) {
     return null;
   }
@@ -32,7 +36,7 @@ export default function Skills() {
             <h1
               className={isDark ? "dark-mode skills-heading" : "skills-heading"}
             >
-              {skillsSection.title}{" "}
+              {getText(skillsSection.title, isSpanish)}{" "}
             </h1>
             <p
               className={
@@ -41,11 +45,11 @@ export default function Skills() {
                   : "subTitle skills-text-subtitle"
               }
             >
-              {skillsSection.subTitle}
+              {getText(skillsSection.subTitle, isSpanish)}
             </p>
             <SoftwareSkill />
             <div>
-              {skillsSection.skills.map((skills, i) => {
+              {getText(skillsSection.skills, isSpanish).map((skills, i) => {
                 return (
                   <p
                     key={i}

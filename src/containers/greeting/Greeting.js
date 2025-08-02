@@ -9,9 +9,13 @@ import Button from "../../components/button/Button";
 import ResumeModal from "../../components/header/ResumeModal";
 import {illustration, greeting} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
+import LanguageContext from "../../contexts/LanguageContext";
+import {useTranslation, getText} from "../../utils/translations";
 
 export default function Greeting() {
   const {isDark} = useContext(StyleContext);
+  const {isSpanish} = useContext(LanguageContext);
+  const {t} = useTranslation(isSpanish);
   const [showResumeModal, setShowResumeModal] = useState(false);
   
   const resumeLinks = {
@@ -32,7 +36,7 @@ export default function Greeting() {
                 className={isDark ? "dark-mode greeting-text" : "greeting-text"}
               >
                 {" "}
-                {greeting.title}{" "}
+                {getText(greeting.title, isSpanish)}{" "}
                 <span className="wave-emoji">{emoji("👋")}</span>
               </h1>
               <p
@@ -42,19 +46,19 @@ export default function Greeting() {
                     : "greeting-text-p subTitle"
                 }
               >
-                {greeting.subTitle}
+                {getText(greeting.subTitle, isSpanish)}
               </p>
               <div id="resume" className="empty-div"></div>
               <SocialMedia />
               <div className="button-greeting-div">
                 <Button
-                  text="Contact me"
+                  text={t('contactMeBtn')}
                   href="#contact"
                   umamiEvent="contact me button"
                 />
                 {greeting.resumeLink && (
                   <Button
-                    text="Download my resume"
+                    text={t('downloadResume')}
                     onClick={() => setShowResumeModal(true)}
                     umamiEvent="download resume button"
                     className="download-link-button"
