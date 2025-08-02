@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  portfolio:
+    image: ghcr.io/jamesnoria/portfolio:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    container_name: portfolio-app
+    networks:
+      - portfolio-network
+
+networks:
+  portfolio-network:
+    driver: bridge
