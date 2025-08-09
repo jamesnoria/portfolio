@@ -55,7 +55,8 @@ const LanguageNotification = () => {
 
     // Check if user has seen the notification before
     // const hasSeenNotification = false;
-    const hasSeenNotification = localStorage.getItem('hasSeenLanguageNotification');
+    // const hasSeenNotification = localStorage.getItem('hasSeenLanguageNotification');
+    const hasSeenNotification = false; // Always show notification
     
     if (!hasSeenNotification) {
       // Show notification after 2 seconds
@@ -68,7 +69,8 @@ const LanguageNotification = () => {
       // Auto-hide after 8 seconds (more time for mobile message)
       const hideTimer = setTimeout(() => {
         setIsVisible(false);
-        localStorage.setItem('hasSeenLanguageNotification', 'true');
+        // Don't save to localStorage so it shows every time
+        // localStorage.setItem('hasSeenLanguageNotification', 'true');
       }, 10000);
 
       return () => {
@@ -85,7 +87,8 @@ const LanguageNotification = () => {
 
   const handleClose = () => {
     setIsVisible(false);
-    localStorage.setItem('hasSeenLanguageNotification', 'true');
+    // Don't save to localStorage so it shows every time
+    // localStorage.setItem('hasSeenLanguageNotification', 'true');
   };
 
   if (!isVisible) return null;
