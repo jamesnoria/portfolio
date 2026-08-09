@@ -49,16 +49,9 @@ jobs:
           cache-to: type=gha,mode=max
 
   update-lxc:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, production]
     needs: dockerhub-publish
     steps:
-      - name: Set up tailscale
-        uses: tailscale/github-action@v2
-        with:
-          oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
-          oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
-          tags: tag:ci
-
       - name: Install sshpass
         run: |
           sudo apt-get update && sudo apt-get install -y sshpass
