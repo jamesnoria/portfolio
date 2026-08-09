@@ -1,6 +1,6 @@
 services:
   portfolio:
-    image: ghcr.io/jamesnoria/portfolio:latest
+    image: jnoriadev/personal-portfolio:latest
     ports:
       - "3000:3000"
     environment:
