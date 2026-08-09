@@ -6,7 +6,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,10 +17,11 @@
 }
 
 .resume-modal {
+  position: relative;
   background: $lightBackground1;
-  padding: 1.5rem;
+  padding: 2rem 1.5rem 1.75rem;
   border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   width: 100%;
   max-width: 400px;
   max-height: 80vh;
@@ -35,7 +36,33 @@
 .resume-modal.dark-modal {
   background: $darkBackground;
   color: $textColorDark;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+.resume-close-icon {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.9rem;
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.resume-close-icon:hover {
+  background: rgba(85, 25, 139, 0.12);
+  color: $buttonColor;
+  transform: scale(1.05);
 }
 
 @keyframes modalAppear {
@@ -61,7 +88,7 @@
   display: flex;
   justify-content: space-around;
   gap: 1rem;
-  margin: 1.5rem 0;
+  margin: 1.5rem 0 0;
 }
 
 .resume-btn {
@@ -73,7 +100,10 @@
   font-weight: 600;
   transition: all 0.3s ease;
   min-width: 100px;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
   font-family: inherit;
   text-transform: uppercase;
   font-size: 0.9rem;
@@ -82,38 +112,14 @@
 .resume-btn:hover {
   background: darken($buttonColor, 10%);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   color: white;
 }
 
-.close-btn {
-  background: transparent;
-  border: 2px solid $buttonColor;
-  color: $buttonColor;
-  padding: 0.5rem 1.5rem;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-  margin-top: 1rem;
-  transition: all 0.3s ease;
-  font-family: inherit;
-  text-transform: uppercase;
-  font-size: 0.85rem;
-}
-
-.close-btn:hover {
-  background: $buttonColor;
-  color: white;
-}
-
-.dark-modal .close-btn {
-  border-color: $buttonColor;
-  color: $buttonColor;
-}
-
-.dark-modal .close-btn:hover {
-  background: $buttonColor;
-  color: white;
+.download-symbol {
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1;
 }
 
 /* Mobile responsiveness */
@@ -121,23 +127,23 @@
   .resume-modal-overlay {
     padding: 0.75rem;
   }
-  
+
   .resume-modal {
     max-width: 100%;
-    padding: 1.5rem;
+    padding: 2rem 1.5rem 1.5rem;
   }
-  
+
   .resume-modal h3 {
     font-size: 1.1rem;
     margin-bottom: 1rem;
   }
-  
+
   .resume-options {
     flex-direction: column;
     gap: 0.75rem;
     align-items: center;
   }
-  
+
   .resume-btn {
     width: 80%;
     max-width: 200px;
@@ -150,34 +156,29 @@
   .resume-modal-overlay {
     padding: 0.5rem;
   }
-  
+
   .resume-modal {
     max-width: 100%;
-    padding: 1.25rem;
+    padding: 2rem 1.25rem 1.25rem;
     border-radius: 8px;
   }
-  
+
   .resume-modal h3 {
     font-size: 1rem;
     margin-bottom: 0.75rem;
   }
-  
+
   .resume-options {
     flex-direction: column;
     gap: 0.5rem;
     margin: 0.75rem 0;
     align-items: center;
   }
-  
+
   .resume-btn {
     width: 80%;
     max-width: 200px;
     padding: 0.5rem 1rem;
     font-size: 0.8rem;
-  }
-  
-  .close-btn {
-    padding: 0.4rem 1rem;
-    font-size: 0.75rem;
   }
 }

@@ -1,24 +1,20 @@
-import React, {useState, useContext} from "react";
+import React, {useContext} from "react";
 import LanguageContext from "../../contexts/LanguageContext";
 import "./LanguageToggle.scss";
 
 const LanguageToggle = () => {
-  const {isSpanish} = useContext(LanguageContext);
-  const [isChecked, setChecked] = useState(isSpanish);
-  const languageContext = useContext(LanguageContext);
+  const {isSpanish, changeLanguage} = useContext(LanguageContext);
 
   return (
     <label className="language-switch">
       <input
         type="checkbox"
+        aria-label={isSpanish ? "Cambiar a inglés" : "Switch to Spanish"}
         checked={isSpanish}
-        onChange={() => {
-          languageContext.changeLanguage();
-          setChecked(!isChecked);
-        }}
+        onChange={changeLanguage}
       />
       <span className="language-slider round">
-        <span className="flag-emoji">{isChecked ? "🇪🇸" : "🇺🇸"}</span>
+        <span className="language-label">{isSpanish ? "ES" : "EN"}</span>
       </span>
     </label>
   );

@@ -18,7 +18,7 @@
 }
 
 .subTitle {
-  color: $subTitle !important;
+  color: $textColor;
 }
 
 .greeting-main {
@@ -36,8 +36,22 @@
 
 .button-greeting-div {
   display: flex;
+  align-items: center;
+  gap: 50px;
   margin-top: 40px;
 }
+
+.button-greeting-div .main-button {
+  width: 255px;
+  min-height: 50px;
+  margin: 0;
+  padding: 13px 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
 .download-link-button {
   text-decoration: none;
 }
@@ -48,9 +62,69 @@
   color: $textColor !important;
 }
 
+.dark-mode.greeting-text {
+  color: $textColorDark !important;
+}
+
 .greeting-text-p {
   font-size: 30px;
   line-height: 40px;
+}
+
+.greeting-text-p.subTitle {
+  color: $textColor !important;
+}
+
+.dark-mode.greeting-text-p {
+  color: $textColorDark !important;
+}
+
+.greeting-highlights {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(90px, 1fr));
+  gap: 10px;
+  margin-top: 28px;
+  max-width: 720px;
+}
+
+.greeting-highlight-card {
+  padding: 14px 10px;
+  border: 1px solid rgba(85, 25, 139, 0.16);
+  border-radius: 14px;
+  background: rgba(85, 25, 139, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode .greeting-highlight-card {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: none;
+}
+
+.highlight-value {
+  display: block;
+  color: $buttonColor;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.dark-mode .highlight-value {
+  color: $textColorDark;
+}
+
+.highlight-label {
+  display: block;
+  margin-top: 7px;
+  color: $textColor;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.dark-mode .highlight-label {
+  color: $textColorDark;
 }
 
 .greeting-image-div > img {
@@ -107,29 +181,40 @@
     align-items: center;
     gap: 15px;
   }
-  
+
+  .button-greeting-div .main-button {
+    width: 100%;
+    max-width: 250px;
+    min-height: 48px;
+  }
+
   .greeting-text {
     font-size: 30px;
     text-align: center;
   }
-  
+
   .greeting-text-p {
     font-size: 16px;
     line-height: 1.4;
     text-align: center;
     margin: 20px 0;
   }
-  
+
   .greeting-main {
     display: block;
     text-align: center;
   }
-  
+
+  .greeting-highlights {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: 24px auto 0;
+  }
+
   .greeting-image-div {
     height: 256px;
     margin-bottom: 30px;
   }
-  
+
   .main-button {
     margin-right: 0 !important;
     width: 100%;
@@ -142,21 +227,58 @@
     font-size: 24px;
     line-height: 1.2;
   }
-  
+
   .greeting-text-p {
     font-size: 14px;
     padding: 0 10px;
   }
-  
+
+  .greeting-highlights {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    padding: 0 6px;
+  }
+
+  .greeting-highlight-card {
+    min-height: 82px;
+    padding: 13px 8px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .greeting-highlight-card:first-child {
+    grid-column: 1 / -1;
+    min-height: 76px;
+    background: rgba(85, 25, 139, 0.12);
+  }
+
+  .dark-mode .greeting-highlight-card:first-child {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .highlight-value {
+    font-size: 22px;
+  }
+
+  .highlight-label {
+    max-width: 120px;
+    margin-top: 6px;
+    font-size: 9px;
+    line-height: 1.25;
+  }
+
   .greet-main {
     width: 95%;
     padding: 15px 5px;
   }
-  
+
   .button-greeting-div {
     gap: 12px;
   }
-  
+
   .main-button {
     font-size: 0.85rem;
     padding: 10px 16px;
@@ -167,11 +289,11 @@
   .main {
     width: auto;
   }
-  
+
   .greeting-text {
     font-size: 20px;
   }
-  
+
   .greeting-text-p {
     font-size: 13px;
   }

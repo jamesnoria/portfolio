@@ -12,7 +12,7 @@ import {getText} from "../../utils/translations";
 export default function Skills() {
   const {isDark} = useContext(StyleContext);
   const {isSpanish} = useContext(LanguageContext);
-  
+
   if (!skillsSection.display) {
     return null;
   }
@@ -48,7 +48,7 @@ export default function Skills() {
               {getText(skillsSection.subTitle, isSpanish)}
             </p>
             <SoftwareSkill />
-            <div>
+            <div className="skills-list">
               {getText(skillsSection.skills, isSpanish).map((skills, i) => {
                 return (
                   <p

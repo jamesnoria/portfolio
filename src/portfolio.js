@@ -22,19 +22,56 @@ const illustration = {
 const greeting = {
   username: "James Noria",
   title: {
-    en: "Hi all, I'm James Noria",
-    es: "Hola a todos, soy James Noria"
+    en: "Hi, I'm James Noria. I help teams ship reliable software.",
+    es: "Hola, soy James Noria. Ayudo a equipos a entregar software confiable."
   },
   subTitle: {
     en: emoji(
-      "Backend Developer with 6+ years of experience delivering scalable solutions, optimizing performance, and driving impactful results in dynamic environments."
+      "Technical Lead and Software Developer with nearly 7 years of experience building reliable products, scalable platforms, and cloud-native systems across different business domains."
     ),
     es: emoji(
-      "Desarrollador Backend con más de 6 años de experiencia entregando soluciones escalables, optimizando rendimiento y generando resultados impactantes en entornos dinámicos."
+      "Technical Lead y Software Developer con casi 7 años de experiencia construyendo productos confiables, plataformas escalables y sistemas cloud-native en distintos dominios de negocio."
     )
   },
+  highlights: [
+    {
+      value: "~7",
+      label: {
+        en: "years experience",
+        es: "años de experiencia"
+      }
+    },
+    {
+      value: "15",
+      label: {
+        en: "developers led",
+        es: "devs liderados"
+      }
+    },
+    {
+      value: "200+",
+      label: {
+        en: "services supported",
+        es: "servicios soportados"
+      }
+    },
+    {
+      value: "20K+",
+      label: {
+        en: "concurrent users",
+        es: "usuarios concurrentes"
+      }
+    },
+    {
+      value: "60%",
+      label: {
+        en: "faster incident handling",
+        es: "menos tiempo en incidentes"
+      }
+    }
+  ],
   resumeLink:
-    "https://drive.google.com/file/d/1gZXjhkeDUdOrLEswBtb0EO3QLZZYigff/view?usp=sharing", // Set to empty to hide the button
+    "https://drive.google.com/file/d/1PFmluSdpSuqPLUqIzHOpqXyPil0xR3Ru/view", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -61,36 +98,45 @@ const skillsSection = {
     es: "Lo que hago"
   },
   subTitle: {
-    en: "DRIVEN BACKEND DEVELOPER PASSIONATE ABOUT SCALABLE, CLOUD-NATIVE SOLUTIONS",
-    es: "DESARROLLADOR BACKEND APASIONADO POR SOLUCIONES ESCALABLES Y NATIVAS DE LA NUBE"
+    en: "TECHNICAL LEAD AND SOFTWARE DEVELOPER BUILDING RELIABLE, SCALABLE, BUSINESS-READY SOLUTIONS",
+    es: "TECHNICAL LEAD Y SOFTWARE DEVELOPER CONSTRUYENDO SOLUCIONES CONFIABLES, ESCALABLES Y LISTAS PARA EL NEGOCIO"
   },
   skills: {
     en: [
-      emoji("💻 Build and optimize scalable, high-performance backend systems"),
       emoji(
-        "📊 Design and enhance data workflows for efficient processing and storage"
+        "💻 Build reliable software for product, platform, integration, and cloud initiatives"
       ),
       emoji(
-        "☁️ Architect and maintain secure, cloud-native solutions using modern practices"
+        "☁️ Deliver cloud-native systems with AWS, Docker, Kubernetes, and serverless tools"
       ),
       emoji(
-        "🔄 Streamline deployments with automated CI/CD pipelines and containerization"
+        "📊 Work across APIs, databases, integrations, observability, and production workloads"
+      ),
+      emoji(
+        "🔄 Improve architecture, code quality, CI/CD, delivery, and reliability"
+      ),
+      emoji(
+        "🤝 Lead developers, technical decisions, incident response, and cross-functional delivery"
       )
     ],
     es: [
-      emoji("💻 Construir y optimizar sistemas backend escalables y de alto rendimiento"),
       emoji(
-        "📊 Diseñar y mejorar flujos de trabajo de datos para procesamiento y almacenamiento eficientes"
+        "💻 Construir software confiable para producto, plataforma, integración y cloud"
       ),
       emoji(
-        "☁️ Arquitecturar y mantener soluciones seguras y nativas de la nube usando prácticas modernas"
+        "☁️ Entregar sistemas cloud-native con AWS, Docker, Kubernetes y herramientas serverless"
       ),
       emoji(
-        "🔄 Optimizar despliegues con pipelines de CI/CD automatizados y contenerización"
+        "📊 Trabajar con APIs, bases de datos, integraciones, observabilidad y cargas productivas"
+      ),
+      emoji(
+        "🔄 Mejorar arquitectura, calidad de código, CI/CD, entrega y confiabilidad"
+      ),
+      emoji(
+        "🤝 Liderar desarrolladores, decisiones técnicas, incidentes y entrega cross-functional"
       )
     ]
   },
-
   softwareSkills: [
     {
       skillName: "Javascript",
@@ -105,36 +151,24 @@ const skillsSection = {
       fontAwesomeClassname: "skill-icons:typescript"
     },
     {
-      skillName: "NestJS",
-      fontAwesomeClassname: "skill-icons:nestjs-dark"
-    },
-    {
       skillName: "Express",
       fontAwesomeClassname: "skill-icons:expressjs-dark"
+    },
+    {
+      skillName: "React",
+      fontAwesomeClassname: "skill-icons:react-dark"
     },
     {
       skillName: "Python",
       fontAwesomeClassname: "skill-icons:python-dark"
     },
     {
-      skillName: "Django",
-      fontAwesomeClassname: "skill-icons:django"
+      skillName: "PostgreSQL",
+      fontAwesomeClassname: "skill-icons:postgresql-dark"
     },
     {
-      skillName: "Java",
-      fontAwesomeClassname: "skill-icons:java-dark"
-    },
-    {
-      skillName: "Bash",
-      fontAwesomeClassname: "skill-icons:bash-dark"
-    },
-    {
-      skillName: "GraphQL",
-      fontAwesomeClassname: "skill-icons:graphql-dark"
-    },
-    {
-      skillName: "Linux",
-      fontAwesomeClassname: "skill-icons:linux-dark"
+      skillName: "MySQL",
+      fontAwesomeClassname: "skill-icons:mysql-dark"
     },
     {
       skillName: "AWS",
@@ -149,28 +183,16 @@ const skillsSection = {
       fontAwesomeClassname: "skill-icons:kubernetes"
     },
     {
+      skillName: "Linux",
+      fontAwesomeClassname: "skill-icons:linux-dark"
+    },
+    {
       skillName: "Gitlab CI/CD",
       fontAwesomeClassname: "skill-icons:gitlab-dark"
     },
     {
       skillName: "Github Actions",
       fontAwesomeClassname: "skill-icons:githubactions-dark"
-    },
-    {
-      skillName: "Jenkins",
-      fontAwesomeClassname: "skill-icons:jenkins-dark"
-    },
-    {
-      skillName: "PostgreSQL",
-      fontAwesomeClassname: "skill-icons:postgresql-dark"
-    },
-    {
-      skillName: "DynamoDB",
-      fontAwesomeClassname: "skill-icons:dynamodb-dark"
-    },
-    {
-      skillName: "MySQL",
-      fontAwesomeClassname: "skill-icons:mysql-dark"
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -219,24 +241,24 @@ const techStack = {
   experience: [
     {
       Stack: {
-        en: "Programming",
-        es: "Programación"
+        en: "Software Development",
+        es: "Desarrollo de Software"
       },
-      progressPercentage: "85%" // Strong foundation in multiple languages like JavaScript, Python, and Java
+      progressPercentage: "92%"
     },
     {
       Stack: {
-        en: "Cloud/DevOps",
-        es: "Nube/DevOps"
+        en: "Cloud & Distributed Systems",
+        es: "Cloud y Sistemas Distribuidos"
       },
-      progressPercentage: "80%" // Skilled in AWS services, CI/CD automation, Docker, and Kubernetes
+      progressPercentage: "88%"
     },
     {
       Stack: {
-        en: "Databases",
-        es: "Bases de Datos"
+        en: "Technical Leadership",
+        es: "Liderazgo Técnico"
       },
-      progressPercentage: "75%" // Proficient in PostgreSQL, DynamoDB, MySQL, and Oracle
+      progressPercentage: "85%"
     }
   ],
   displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
@@ -251,85 +273,123 @@ const workExperiences = {
     es: "Experiencia"
   },
   subtitle: {
-    en: "My work experience as a software engineer and working on diverse projects",
-    es: "Mi experiencia laboral como ingeniero de software trabajando en diversos proyectos"
+    en: "My professional experience leading technical delivery and building reliable software systems across business-critical initiatives",
+    es: "Mi experiencia profesional liderando entrega técnica y construyendo sistemas de software confiables en iniciativas críticas de negocio"
   },
   experience: [
     {
       role: {
-        en: "Tech Lead",
-        es: "Líder Técnico"
+        en: "Technical Lead",
+        es: "Technical Lead"
       },
-      company: "Rimac Seguros y Reaseguros",
+      company: "RIMAC Seguros y Reaseguros",
       companylogo: require("./assets/images/rimac-logo.png"),
       date: {
-        en: "Oct 2023 – Present",
-        es: "Oct 2023 – Presente"
+        en: "May 2025 – Present | Lima, Peru",
+        es: "Mayo 2025 – Presente | Lima, Perú"
       },
       descBullets: {
         en: [
-          "Designed and implemented backend services for the Estar Bien platform, boosting system scalability and reliability.",
-          "Optimized response times by 30% through serverless solutions in AWS.",
-          "Automated CI/CD pipelines, reducing production errors and deployment time by 40%.",
-          "Migrated critical data to PostgreSQL, improving query performance and ensuring data integrity."
+          "Lead the technical delivery of business-critical insurance and wellness platforms across multiple engineering initiatives.",
+          "Lead and provide technical direction to a team of up to 15 software developers, supporting architecture, implementation, and engineering decisions.",
+          "Oversee an ecosystem of 200+ services and APIs, ensuring scalability, maintainability, and production readiness.",
+          "Support high-traffic platforms handling 20K+ concurrent users during peak campaigns.",
+          "Helped reduce incident handling time by approximately 60% through improved technical processes, observability, and engineering practices.",
+          "Collaborate with Product, QA, Marketing, and business stakeholders to translate business requirements into scalable software solutions."
         ],
         es: [
-          "Diseñé e implementé servicios backend para la plataforma Estar Bien, mejorando la escalabilidad y confiabilidad del sistema.",
-          "Optimicé los tiempos de respuesta en un 30% mediante soluciones serverless en AWS.",
-          "Automaticé pipelines de CI/CD, reduciendo errores de producción y tiempo de despliegue en un 40%.",
-          "Migré datos críticos a PostgreSQL, mejorando el rendimiento de consultas y asegurando la integridad de datos."
+          "Lidero la entrega técnica de plataformas críticas de seguros y bienestar a través de múltiples iniciativas de ingeniería.",
+          "Lidero y doy dirección técnica a un equipo de hasta 15 desarrolladores, apoyando decisiones de arquitectura, implementación e ingeniería.",
+          "Superviso un ecosistema de más de 200 servicios y APIs, asegurando escalabilidad, mantenibilidad y preparación para producción.",
+          "Soporto plataformas de alto tráfico que manejan más de 20K usuarios concurrentes durante campañas pico.",
+          "Ayudé a reducir el tiempo de atención de incidentes en aproximadamente 60% mediante mejores procesos técnicos, observabilidad y prácticas de ingeniería.",
+          "Colaboro con Product, QA, Marketing y stakeholders de negocio para traducir requerimientos en soluciones de software escalables."
         ]
       }
     },
     {
       role: {
-        en: "Senior Backend Developer",
-        es: "Desarrollador Backend Senior"
+        en: "Software Developer Expert",
+        es: "Software Developer Expert"
+      },
+      company: "RIMAC Seguros y Reaseguros",
+      companylogo: require("./assets/images/rimac-logo.png"),
+      date: {
+        en: "Oct 2023 – May 2025 | Lima, Peru",
+        es: "Oct 2023 – Mayo 2025 | Lima, Perú"
+      },
+      descBullets: {
+        en: [
+          "Designed and developed scalable software services and APIs using TypeScript, Node.js, AWS Lambda, and Serverless Framework.",
+          "Built and maintained software components supporting business-critical insurance and digital platforms.",
+          "Worked with PostgreSQL and MySQL for transactional and business-critical workloads.",
+          "Designed solutions using serverless and event-driven architectures to improve scalability and system decoupling.",
+          "Improved system performance, reducing response times to approximately 2 seconds for key information services.",
+          "Participated in architecture discussions, code reviews, troubleshooting, and production incident resolution."
+        ],
+        es: [
+          "Diseñé y desarrollé servicios de software y APIs escalables usando TypeScript, Node.js, AWS Lambda y Serverless Framework.",
+          "Construí y mantuve componentes de software para plataformas digitales y de seguros críticas para el negocio.",
+          "Trabajé con PostgreSQL y MySQL para cargas transaccionales y críticas para el negocio.",
+          "Diseñé soluciones con arquitecturas serverless y event-driven para mejorar escalabilidad y desacoplamiento del sistema.",
+          "Mejoré el rendimiento del sistema, reduciendo tiempos de respuesta a aproximadamente 2 segundos en servicios clave de información.",
+          "Participé en discusiones de arquitectura, code reviews, troubleshooting y resolución de incidentes en producción."
+        ]
+      }
+    },
+    {
+      role: {
+        en: "Senior Software Developer",
+        es: "Senior Software Developer"
       },
       company: "Tata Consultancy Services",
       companylogo: require("./assets/images/tcs-logo.jpg"),
       date: {
-        en: "Sep 2022 – Sep 2023",
-        es: "Sep 2022 – Sep 2023"
+        en: "Sep 2022 – Sep 2023 | Peru",
+        es: "Sep 2022 – Sep 2023 | Perú"
       },
       descBullets: {
         en: [
-          "Reduced integration latency by 25% through REST/SOAP service integrations in hybrid cloud environments.",
-          "Increased system availability with Kubernetes-based solutions for microservices deployment.",
-          "Developed scalable services using Node.js, Java, and Python, optimizing relational databases like Oracle and PostgreSQL.",
-          "Streamlined workflows with AWS Step Functions, enhancing automation for critical business operations."
+          "Developed and maintained software services for enterprise applications.",
+          "Built REST APIs and integrations for business-critical workflows.",
+          "Worked primarily with JavaScript/TypeScript and Node.js-based systems.",
+          "Participated in code reviews, debugging, production support, and technical discussions.",
+          "Collaborated with distributed engineering teams in an enterprise environment."
         ],
         es: [
-          "Reduje la latencia de integración en un 25% mediante integraciones de servicios REST/SOAP en entornos de nube híbrida.",
-          "Aumenté la disponibilidad del sistema con soluciones basadas en Kubernetes para el despliegue de microservicios.",
-          "Desarrollé servicios escalables usando Node.js, Java y Python, optimizando bases de datos relacionales como Oracle y PostgreSQL.",
-          "Optimicé flujos de trabajo con AWS Step Functions, mejorando la automatización para operaciones comerciales críticas."
+          "Desarrollé y mantuve servicios de software para aplicaciones empresariales.",
+          "Construí APIs REST e integraciones para flujos críticos del negocio.",
+          "Trabajé principalmente con JavaScript/TypeScript y sistemas basados en Node.js.",
+          "Participé en code reviews, debugging, soporte a producción y discusiones técnicas.",
+          "Colaboré con equipos de ingeniería distribuidos en un entorno empresarial."
         ]
       }
     },
     {
       role: {
-        en: "Backend Developer",
-        es: "Desarrollador Backend"
+        en: "Software Developer",
+        es: "Software Developer"
       },
       company: "Copstone",
       companylogo: require("./assets/images/copstone-logo.jpg"),
       date: {
-        en: "Sep 2020 – Sep 2022",
-        es: "Sep 2020 – Sep 2022"
+        en: "Sep 2020 – Sep 2022 | Peru",
+        es: "Sep 2020 – Sep 2022 | Perú"
       },
       descBullets: {
         en: [
-          "Achieved 35% cost savings by migrating legacy systems to AWS.",
-          "Accelerated deployment times by 50% through optimized GitLab CI/CD pipelines.",
-          "Engineered microservices using Node.js and TypeScript, enabling seamless data integration for SMB projects.",
-          "Secured user data by designing robust authentication and authorization workflows."
+          "Developed software services and REST APIs for web applications.",
+          "Implemented business logic, database integrations, and third-party service integrations.",
+          "Worked with relational databases and Node.js-based applications.",
+          "Participated in application design, development, testing, deployment, and maintenance.",
+          "Collaborated with frontend developers and stakeholders to deliver end-to-end features."
         ],
         es: [
-          "Logré un ahorro de costos del 35% migrando sistemas legacy a AWS.",
-          "Aceleré los tiempos de despliegue en un 50% mediante pipelines optimizados de GitLab CI/CD.",
-          "Diseñé microservicios usando Node.js y TypeScript, permitiendo integración de datos sin problemas para proyectos SMB.",
-          "Aseguré datos de usuarios diseñando flujos de trabajo robustos de autenticación y autorización."
+          "Desarrollé servicios de software y APIs REST para aplicaciones web.",
+          "Implementé lógica de negocio, integraciones con bases de datos e integraciones con servicios de terceros.",
+          "Trabajé con bases de datos relacionales y aplicaciones basadas en Node.js.",
+          "Participé en diseño, desarrollo, pruebas, despliegue y mantenimiento de aplicaciones.",
+          "Colaboré con desarrolladores frontend y stakeholders para entregar funcionalidades end-to-end."
         ]
       }
     },
@@ -341,21 +401,21 @@ const workExperiences = {
       company: "Freelance IT Services",
       companylogo: require("./assets/images/freelance.jpg"),
       date: {
-        en: "Jan 2020 – Jul 2022",
-        es: "Ene 2020 – Jul 2022"
+        en: "Jan 2020 – Jul 2022 | Peru",
+        es: "Ene 2020 – Jul 2022 | Perú"
       },
       descBullets: {
         en: [
-          "Delivered custom full-stack solutions using ReactJS, Node.js, and Django for diverse client needs.",
-          "Implemented MVC and serverless architectures for small to medium-sized projects, boosting efficiency and adaptability.",
-          "Automated key workflows with AWS Lambda, reducing operational costs significantly.",
-          "Enhanced code quality and maintainability through TypeScript adoption."
+          "Designed and developed web applications for independent clients and small businesses.",
+          "Built frontend and backend functionality according to client requirements.",
+          "Developed APIs, database integrations, and responsive user interfaces.",
+          "Managed projects from requirements gathering through implementation and deployment."
         ],
         es: [
-          "Entregué soluciones full-stack personalizadas usando ReactJS, Node.js y Django para diversas necesidades de clientes.",
-          "Implementé arquitecturas MVC y serverless para proyectos de pequeña a mediana escala, mejorando eficiencia y adaptabilidad.",
-          "Automaticé flujos de trabajo clave con AWS Lambda, reduciendo significativamente los costos operacionales.",
-          "Mejoré la calidad del código y mantenibilidad mediante la adopción de TypeScript."
+          "Diseñé y desarrollé aplicaciones web para clientes independientes y pequeñas empresas.",
+          "Construí funcionalidades frontend y backend según los requerimientos del cliente.",
+          "Desarrollé APIs, integraciones con bases de datos e interfaces responsivas.",
+          "Gestioné proyectos desde el levantamiento de requerimientos hasta la implementación y despliegue."
         ]
       }
     }
@@ -422,60 +482,86 @@ const bigProjects = {
 
 const achievementSection = {
   title: {
-    en: emoji("Achievements And Certifications 🏆 "),
-    es: emoji("Logros Y Certificaciones 🏆 ")
+    en: emoji("Languages And Certifications 🏆 "),
+    es: emoji("Idiomas Y Certificaciones 🏆 ")
   },
   subtitle: {
-    en: "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !",
-    es: "Logros, Certificaciones, Cartas de Premios y Algunas Cosas Geniales que he hecho !"
+    en: "Languages, professional communication skills, and relevant certifications.",
+    es: "Idiomas, habilidades de comunicación profesional y certificaciones relevantes."
   },
 
   achievementsCards: [
     {
-      title: "Google Code-In Finalist",
-      subtitle:
-        "First Pakistani to be selected as Google Code-in Finalist from 4000 students from 77 different countries.",
-      image: require("./assets/images/codeInLogo.webp"),
-      imageAlt: "Google Code-In Logo",
+      title: {
+        en: "Languages",
+        es: "Idiomas"
+      },
+      subtitle: {
+        en: "Spanish: Native or Bilingual. Portuguese: Full Professional Proficiency. English: Professional Working Proficiency.",
+        es: "Español: Nativo o bilingüe. Portugués: Competencia profesional completa. Inglés: Competencia profesional de trabajo."
+      },
+      image: require("./assets/images/developerActivity.svg"),
+      imageAlt: "Languages",
       footerLink: [
         {
-          name: "Certification",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dYkVvNjdNWjNybWJrbndFSHpNY2NFV1p4YmU0/view?usp=sharing"
+          name: {
+            en: "Spanish",
+            es: "Español"
+          },
+          url: ""
         },
         {
-          name: "Award Letter",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dekxBTW5hQkg2WXUyR3QzQmR0VERiLXlGRVdF/view?usp=sharing"
+          name: {
+            en: "Portuguese",
+            es: "Portugués"
+          },
+          url: ""
         },
         {
-          name: "Google Code-in Blog",
-          url: "https://opensource.googleblog.com/2019/01/google-code-in-2018-winners.html"
+          name: {
+            en: "English",
+            es: "Inglés"
+          },
+          url: ""
         }
       ]
     },
     {
-      title: "Google Assistant Action",
-      subtitle:
-        "Developed a Google Assistant Action JavaScript Guru that is available on 2 Billion devices world wide.",
-      image: require("./assets/images/googleAssistantLogo.webp"),
-      imageAlt: "Google Assistant Action Logo",
-      footerLink: [
-        {
-          name: "View Google Assistant Action",
-          url: "https://assistant.google.com/services/a/uid/000000100ee688ee?hl=en"
-        }
-      ]
-    },
-
-    {
-      title: "PWA Web App Developer",
-      subtitle: "Completed Certifcation from SMIT for PWA Web App Development",
+      title: {
+        en: "Agile Software Development",
+        es: "Desarrollo Ágil de Software"
+      },
+      subtitle: {
+        en: "Certification focused on agile delivery practices, iterative development, collaboration, and continuous improvement.",
+        es: "Certificación enfocada en prácticas ágiles de entrega, desarrollo iterativo, colaboración y mejora continua."
+      },
       image: require("./assets/images/pwaLogo.webp"),
-      imageAlt: "PWA Logo",
+      imageAlt: "Agile Software Development",
       footerLink: [
-        {name: "Certification", url: ""},
         {
-          name: "Final Project",
-          url: "https://pakistan-olx-1.firebaseapp.com/"
+          name: {
+            en: "Certification",
+            es: "Certificación"
+          },
+          url: ""
+        }
+      ]
+    },
+    {
+      title: "IT Essentials",
+      subtitle: {
+        en: "Certification covering IT fundamentals, computer systems, networking basics, and technical troubleshooting.",
+        es: "Certificación sobre fundamentos de TI, sistemas informáticos, bases de redes y troubleshooting técnico."
+      },
+      image: require("./assets/images/codeInLogo.webp"),
+      imageAlt: "IT Essentials",
+      footerLink: [
+        {
+          name: {
+            en: "Certification",
+            es: "Certificación"
+          },
+          url: ""
         }
       ]
     }

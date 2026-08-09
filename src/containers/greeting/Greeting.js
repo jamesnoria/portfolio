@@ -17,10 +17,12 @@ export default function Greeting() {
   const {isSpanish} = useContext(LanguageContext);
   const {t} = useTranslation(isSpanish);
   const [showResumeModal, setShowResumeModal] = useState(false);
-  
+
   const resumeLinks = {
-    spanish: "https://drive.google.com/file/d/1gZXjhkeDUdOrLEswBtb0EO3QLZZYigff/view?usp=sharing", // Replace with Spanish resume link
-    english: "https://drive.google.com/file/d/1gZXjhkeDUdOrLEswBtb0EO3QLZZYigff/view?usp=sharing"  // Replace with English resume link
+    spanish:
+      "https://drive.google.com/file/d/1PFmluSdpSuqPLUqIzHOpqXyPil0xR3Ru/view",
+    english:
+      "https://drive.google.com/file/d/1_S1whaW6TUoNAfl0kMiuLhqKbdkaxGbp/view"
   };
 
   if (!greeting.displayGreeting) {
@@ -48,17 +50,30 @@ export default function Greeting() {
               >
                 {getText(greeting.subTitle, isSpanish)}
               </p>
+              <div
+                className="greeting-highlights"
+                aria-label="Career highlights"
+              >
+                {greeting.highlights.map((highlight, index) => (
+                  <div className="greeting-highlight-card" key={index}>
+                    <span className="highlight-value">{highlight.value}</span>
+                    <span className="highlight-label">
+                      {getText(highlight.label, isSpanish)}
+                    </span>
+                  </div>
+                ))}
+              </div>
               <div id="resume" className="empty-div"></div>
               <SocialMedia />
               <div className="button-greeting-div">
                 <Button
-                  text={t('contactMeBtn')}
+                  text={t("contactMeBtn")}
                   href="#contact"
                   umamiEvent="contact me button"
                 />
                 {greeting.resumeLink && (
                   <Button
-                    text={t('downloadResume')}
+                    text={t("downloadResume")}
                     onClick={() => setShowResumeModal(true)}
                     umamiEvent="download resume button"
                     className="download-link-button"

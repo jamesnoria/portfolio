@@ -7,9 +7,10 @@
   height: 26px;
 }
 
-/* Fix visible slider checkbox */
-input {
-  transform: scale(0.5);
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 .slider {
@@ -27,28 +28,29 @@ input {
 .slider::before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 28px;
-  left: 0;
-  bottom: 0;
+  height: 22px;
+  width: 22px;
+  left: 2px;
+  bottom: 2px;
   background-color: $textColorDark;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  z-index: 1;
 }
 
-input:checked + .slider {
+.switch input:checked + .slider {
   background-color: $toggleCheck;
 }
 
-input:focus + .slider {
+.switch input:focus + .slider {
   box-shadow: $toggleCheck;
 }
 
-input:checked + .slider::before,
-input:checked + .slider > .emoji {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+.switch input:checked + .slider::before,
+.switch input:checked + .slider > .emoji {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
 }
 
 /* Rounded sliders */
@@ -60,50 +62,20 @@ input:checked + .slider > .emoji {
 
 .slider.round::before {
   border-radius: 50%;
-  display: grid;
-  place-items: center;
-}
-
-.slider::after {
-  display: inline;
-  position: absolute;
-  right: 9.3%;
-  bottom: 17.5%;
-}
-
-input:checked + .slider::after {
-  display: inline;
-  position: absolute;
-  right: 56.3%;
-  bottom: 14.5%;
 }
 
 .emoji {
-  z-index: 10;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  z-index: 2;
+  width: 22px;
+  height: 22px;
   display: flex;
   align-items: center;
-  margin-left: 2px;
-}
-
-@media all and (max-width: 786px) and (min-width: 425px) {
-  input:checked + .slider::after {
-    right: 60.3%;
-    bottom: 20.5%;
-  }
-  .slider::after {
-    right: 15.3%;
-    bottom: 22.5%;
-  }
-}
-
-@media all and (max-width: 2560px) and (min-width: 1552px) {
-  .slider::after {
-    bottom: 12.5% !important;
-  }
-}
-
-@media all and (max-width: 1552px) and (min-width: 1440px) {
-  .slider::after {
-    bottom: 7.5% !important;
-  }
+  justify-content: center;
+  font-size: 13px;
+  line-height: 1;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }

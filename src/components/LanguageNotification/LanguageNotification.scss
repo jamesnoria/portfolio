@@ -5,35 +5,65 @@
   top: 80px;
   right: 20px;
   z-index: 9999;
-  max-width: 300px;
+  max-width: 360px;
   background: $lightBackground1;
   border: 1px solid $buttonColor;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-radius: 14px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.16);
   animation: slideInRight 0.5s ease-out;
+  overflow: hidden;
 }
 
 .notification-content {
   display: flex;
   align-items: flex-start;
-  padding: 12px;
-  gap: 10px;
+  padding: 16px;
+  gap: 12px;
 }
 
 .notification-icon {
-  font-size: 20px;
-  margin-top: 2px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(85, 25, 139, 0.1);
+  color: $buttonColor;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .notification-text {
   flex: 1;
 }
 
+.notification-text strong {
+  display: block;
+  margin-bottom: 4px;
+  color: $textColor;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
 .notification-text p {
   margin: 0;
-  font-size: 14px;
-  line-height: 1.4;
+  font-size: 13px;
+  line-height: 1.5;
   color: $textColor;
+}
+
+.notification-toggle-hint {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 10px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(85, 25, 139, 0.1);
+  color: $buttonColor;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
 .notification-close {
@@ -53,17 +83,27 @@
 }
 
 .notification-close:hover {
-  background: rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.1);
 }
 
 /* Dark mode styles */
 .dark-mode .language-notification {
   background: $darkBackground;
   border-color: $buttonColor;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
 }
 
+.dark-mode .notification-text strong,
 .dark-mode .notification-text p {
+  color: $textColorDark;
+}
+
+.dark-mode .notification-icon,
+.dark-mode .notification-toggle-hint {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .notification-toggle-hint {
   color: $textColorDark;
 }
 
@@ -72,7 +112,7 @@
 }
 
 .dark-mode .notification-close:hover {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /* Animation */
@@ -95,17 +135,19 @@
     left: 15px;
     max-width: none;
   }
-  
+
   .notification-content {
-    padding: 10px;
+    padding: 14px;
   }
-  
+
   .notification-text p {
     font-size: 13px;
   }
-  
+
   .notification-icon {
-    font-size: 18px;
+    width: 32px;
+    height: 32px;
+    font-size: 17px;
   }
 }
 
@@ -115,11 +157,11 @@
     right: 10px;
     left: 10px;
   }
-  
+
   .notification-content {
-    padding: 8px;
+    padding: 12px;
   }
-  
+
   .notification-text p {
     font-size: 12px;
   }

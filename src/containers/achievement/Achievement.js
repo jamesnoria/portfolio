@@ -44,11 +44,14 @@ export default function Achievement() {
                   key={i}
                   isDark={isDark}
                   cardInfo={{
-                    title: card.title,
-                    description: card.subtitle,
+                    title: getText(card.title, isSpanish),
+                    description: getText(card.subtitle, isSpanish),
                     image: card.image,
                     imageAlt: card.imageAlt,
-                    footer: card.footerLink
+                    footer: card.footerLink.map(link => ({
+                      ...link,
+                      name: getText(link.name, isSpanish)
+                    }))
                   }}
                 />
               );

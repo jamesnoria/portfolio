@@ -10,9 +10,6 @@ import {
   greeting,
   workExperiences,
   skillsSection,
-  openSource,
-  blogSection,
-  talkSection,
   achievementSection,
   resumeSection
 } from "../../portfolio";
@@ -23,12 +20,14 @@ function Header() {
   const {isSpanish} = useContext(LanguageContext);
   const {t} = useTranslation(isSpanish);
   const [showResumeModal, setShowResumeModal] = useState(false);
-  
+
   const resumeLinks = {
-    spanish: "https://drive.google.com/file/d/1gZXjhkeDUdOrLEswBtb0EO3QLZZYigff/view?usp=sharing", // Replace with Spanish resume link
-    english: "https://drive.google.com/file/d/1gZXjhkeDUdOrLEswBtb0EO3QLZZYigff/view?usp=sharing"  // Replace with English resume link
+    spanish:
+      "https://drive.google.com/file/d/1PFmluSdpSuqPLUqIzHOpqXyPil0xR3Ru/view",
+    english:
+      "https://drive.google.com/file/d/1_S1whaW6TUoNAfl0kMiuLhqKbdkaxGbp/view"
   };
-  
+
   const viewExperience = workExperiences.display;
   const viewSkills = skillsSection.display;
   const viewAchievement = achievementSection.display;
@@ -54,31 +53,36 @@ function Header() {
           {viewSkills && (
             <li>
               <a href="#skills" data-umami-event="skills tab">
-                {t('skills')}
+                {t("skills")}
               </a>
             </li>
           )}
           {viewExperience && (
             <li>
               <a href="#experience" data-umami-event="experience tab">
-                {t('workExperiences')}
+                {t("workExperiences")}
               </a>
             </li>
           )}
           {viewAchievement && (
             <li>
-              <a href="#achievements">Achievements</a>
+              <a href="#achievements">{t("achievements")}</a>
             </li>
           )}
           {viewResume && (
             <li>
-              <button className="resume-popup-btn" onClick={() => setShowResumeModal(true)}>
-                {t('resume')}
+              <button
+                className="resume-popup-btn"
+                onClick={() => setShowResumeModal(true)}
+              >
+                {t("resume")}
               </button>
             </li>
           )}
           <li>
-            <a href="#contact" data-umami-event="contact me tab">{t('contactMe')}</a>
+            <a href="#contact" data-umami-event="contact me tab">
+              {t("contactMe")}
+            </a>
           </li>
           <li>
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
@@ -91,10 +95,7 @@ function Header() {
         <ResumeModal
           show={showResumeModal}
           onClose={() => setShowResumeModal(false)}
-          resumeLinks={{
-            spanish: "https://drive.google.com/file/d/1gZXjhkeDUdOrLEswBtb0EO3QLZZYigff/view?usp=sharing", // Replace with Spanish resume link
-            english: "https://drive.google.com/file/d/1gZXjhkeDUdOrLEswBtb0EO3QLZZYigff/view?usp=sharing"  // Replace with English resume link
-          }}
+          resumeLinks={resumeLinks}
         />
       </header>
     </Headroom>

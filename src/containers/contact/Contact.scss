@@ -19,18 +19,51 @@
 
 .contact-detail,
 .contact-detail-email {
+  position: relative;
+  display: inline-block;
   margin-top: 20px;
   font-size: 40px;
   font-weight: 400;
-  color: $subTitle;
+  color: $textColor;
   text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.contact-detail::after,
+.contact-detail-email::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 3px;
+  border-radius: 999px;
+  background: $buttonColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
 }
 
 .contact-detail:hover,
-.contact-detail-email:hover {
-  color: $textColor;
-  text-shadow: 2px 1px 2px $contactDetailHoverTS;
-  transition: all 0.3s;
+.contact-detail-email:hover,
+.contact-detail:focus-visible,
+.contact-detail-email:focus-visible {
+  color: $buttonColor;
+  outline: none;
+}
+
+.dark-mode .contact-detail:hover,
+.dark-mode .contact-detail-email:hover,
+.dark-mode .contact-detail:focus-visible,
+.dark-mode .contact-detail-email:focus-visible {
+  color: $textColorDark;
+}
+
+.contact-detail:hover::after,
+.contact-detail-email:hover::after,
+.contact-detail:focus-visible::after,
+.contact-detail-email:focus-visible::after {
+  transform: scaleX(1);
 }
 
 .contact-subtitle {
@@ -57,7 +90,7 @@
   .contact-title {
     font-size: 45px;
   }
-  
+
   .contact-detail,
   .contact-detail-email {
     font-size: 30px;
@@ -88,7 +121,7 @@
   .contact-detail-email {
     font-size: 18px;
     margin: 15px 0;
-    display: block;
+    display: inline-block;
   }
 
   .contact-div-main {
@@ -100,7 +133,7 @@
     order: 2;
     margin-top: 30px;
   }
-  
+
   .contact-image-div > img {
     margin: 0;
     max-width: 200px;
@@ -122,11 +155,11 @@
     font-size: 16px;
     margin: 12px 0;
   }
-  
+
   .contact-margin-top {
     margin-top: 2rem;
   }
-  
+
   .contact-image-div {
     display: none;
   }
