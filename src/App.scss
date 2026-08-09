@@ -61,6 +61,7 @@ body {
 
   /* Improve text readability on mobile */
   .subTitle {
+    font-size: 15px;
     line-height: 1.5;
   }
 
@@ -78,6 +79,11 @@ body {
   }
 
   /* Adjust font sizes for very small screens */
+  .subTitle {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
   .App-header {
     font-size: calc(0.5rem + 1.5vmin);
   }

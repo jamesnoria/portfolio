@@ -98,8 +98,8 @@ const skillsSection = {
     es: "Lo que hago"
   },
   subTitle: {
-    en: "TECHNICAL LEAD AND SOFTWARE DEVELOPER BUILDING RELIABLE, SCALABLE, BUSINESS-READY SOLUTIONS",
-    es: "TECHNICAL LEAD Y SOFTWARE DEVELOPER CONSTRUYENDO SOLUCIONES CONFIABLES, ESCALABLES Y LISTAS PARA EL NEGOCIO"
+    en: "Technical Lead and Software Developer building reliable, scalable, business-ready solutions",
+    es: "Technical Lead y Software Developer construyendo soluciones confiables, escalables y listas para el negocio"
   },
   skills: {
     en: [
@@ -290,20 +290,14 @@ const workExperiences = {
       },
       descBullets: {
         en: [
-          "Lead the technical delivery of business-critical insurance and wellness platforms across multiple engineering initiatives.",
           "Lead and provide technical direction to a team of up to 15 software developers, supporting architecture, implementation, and engineering decisions.",
           "Oversee an ecosystem of 200+ services and APIs, ensuring scalability, maintainability, and production readiness.",
-          "Support high-traffic platforms handling 20K+ concurrent users during peak campaigns.",
-          "Helped reduce incident handling time by approximately 60% through improved technical processes, observability, and engineering practices.",
-          "Collaborate with Product, QA, Marketing, and business stakeholders to translate business requirements into scalable software solutions."
+          "Helped reduce incident handling time by approximately 60% through improved technical processes, observability, and engineering practices."
         ],
         es: [
-          "Lidero la entrega técnica de plataformas críticas de seguros y bienestar a través de múltiples iniciativas de ingeniería.",
           "Lidero y doy dirección técnica a un equipo de hasta 15 desarrolladores, apoyando decisiones de arquitectura, implementación e ingeniería.",
           "Superviso un ecosistema de más de 200 servicios y APIs, asegurando escalabilidad, mantenibilidad y preparación para producción.",
-          "Soporto plataformas de alto tráfico que manejan más de 20K usuarios concurrentes durante campañas pico.",
-          "Ayudé a reducir el tiempo de atención de incidentes en aproximadamente 60% mediante mejores procesos técnicos, observabilidad y prácticas de ingeniería.",
-          "Colaboro con Product, QA, Marketing y stakeholders de negocio para traducir requerimientos en soluciones de software escalables."
+          "Ayudé a reducir el tiempo de atención de incidentes en aproximadamente 60% mediante mejores procesos técnicos, observabilidad y prácticas de ingeniería."
         ]
       }
     },
@@ -321,19 +315,13 @@ const workExperiences = {
       descBullets: {
         en: [
           "Designed and developed scalable software services and APIs using TypeScript, Node.js, AWS Lambda, and Serverless Framework.",
-          "Built and maintained software components supporting business-critical insurance and digital platforms.",
-          "Worked with PostgreSQL and MySQL for transactional and business-critical workloads.",
           "Designed solutions using serverless and event-driven architectures to improve scalability and system decoupling.",
-          "Improved system performance, reducing response times to approximately 2 seconds for key information services.",
-          "Participated in architecture discussions, code reviews, troubleshooting, and production incident resolution."
+          "Improved system performance, reducing response times to approximately 2 seconds for key information services."
         ],
         es: [
           "Diseñé y desarrollé servicios de software y APIs escalables usando TypeScript, Node.js, AWS Lambda y Serverless Framework.",
-          "Construí y mantuve componentes de software para plataformas digitales y de seguros críticas para el negocio.",
-          "Trabajé con PostgreSQL y MySQL para cargas transaccionales y críticas para el negocio.",
           "Diseñé soluciones con arquitecturas serverless y event-driven para mejorar escalabilidad y desacoplamiento del sistema.",
-          "Mejoré el rendimiento del sistema, reduciendo tiempos de respuesta a aproximadamente 2 segundos en servicios clave de información.",
-          "Participé en discusiones de arquitectura, code reviews, troubleshooting y resolución de incidentes en producción."
+          "Mejoré el rendimiento del sistema, reduciendo tiempos de respuesta a aproximadamente 2 segundos en servicios clave de información."
         ]
       }
     },
@@ -352,16 +340,12 @@ const workExperiences = {
         en: [
           "Developed and maintained software services for enterprise applications.",
           "Built REST APIs and integrations for business-critical workflows.",
-          "Worked primarily with JavaScript/TypeScript and Node.js-based systems.",
-          "Participated in code reviews, debugging, production support, and technical discussions.",
-          "Collaborated with distributed engineering teams in an enterprise environment."
+          "Collaborated with distributed engineering teams on code reviews, debugging, production support, and technical discussions."
         ],
         es: [
           "Desarrollé y mantuve servicios de software para aplicaciones empresariales.",
           "Construí APIs REST e integraciones para flujos críticos del negocio.",
-          "Trabajé principalmente con JavaScript/TypeScript y sistemas basados en Node.js.",
-          "Participé en code reviews, debugging, soporte a producción y discusiones técnicas.",
-          "Colaboré con equipos de ingeniería distribuidos en un entorno empresarial."
+          "Colaboré con equipos de ingeniería distribuidos en code reviews, debugging, soporte a producción y discusiones técnicas."
         ]
       }
     },
@@ -380,15 +364,11 @@ const workExperiences = {
         en: [
           "Developed software services and REST APIs for web applications.",
           "Implemented business logic, database integrations, and third-party service integrations.",
-          "Worked with relational databases and Node.js-based applications.",
-          "Participated in application design, development, testing, deployment, and maintenance.",
           "Collaborated with frontend developers and stakeholders to deliver end-to-end features."
         ],
         es: [
           "Desarrollé servicios de software y APIs REST para aplicaciones web.",
           "Implementé lógica de negocio, integraciones con bases de datos e integraciones con servicios de terceros.",
-          "Trabajé con bases de datos relacionales y aplicaciones basadas en Node.js.",
-          "Participé en diseño, desarrollo, pruebas, despliegue y mantenimiento de aplicaciones.",
           "Colaboré con desarrolladores frontend y stakeholders para entregar funcionalidades end-to-end."
         ]
       }
@@ -407,13 +387,11 @@ const workExperiences = {
       descBullets: {
         en: [
           "Designed and developed web applications for independent clients and small businesses.",
-          "Built frontend and backend functionality according to client requirements.",
           "Developed APIs, database integrations, and responsive user interfaces.",
           "Managed projects from requirements gathering through implementation and deployment."
         ],
         es: [
           "Diseñé y desarrollé aplicaciones web para clientes independientes y pequeñas empresas.",
-          "Construí funcionalidades frontend y backend según los requerimientos del cliente.",
           "Desarrollé APIs, integraciones con bases de datos e interfaces responsivas.",
           "Gestioné proyectos desde el levantamiento de requerimientos hasta la implementación y despliegue."
         ]
@@ -446,8 +424,8 @@ const bigProjects = {
     es: "Grandes Proyectos"
   },
   subtitle: {
-    en: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
-    es: "ALGUNAS STARTUPS Y COMPAÑÍAS A LAS QUE AYUDÉ A CREAR SU TECNOLOGÍA"
+    en: "Some startups and companies that I helped to create their tech",
+    es: "Algunas startups y compañías a las que ayudé a crear su tecnología"
   },
   projects: [
     {
@@ -596,9 +574,9 @@ const blogSection = {
 // Talks Sections
 
 const talkSection = {
-  title: "TALKS",
+  title: "Talks",
   subtitle: emoji(
-    "I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅"
+    "I love to share my knowledge and learn from technical communities 😅"
   ),
 
   talks: [
@@ -616,7 +594,7 @@ const talkSection = {
 
 const podcastSection = {
   title: emoji("Podcast 🎙️"),
-  subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
+  subtitle: "I love to talk about technology and software development",
 
   // Please Provide with Your Podcast embeded Link
   podcast: [

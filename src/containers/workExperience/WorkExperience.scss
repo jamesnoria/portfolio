@@ -31,24 +31,24 @@
 
 @media (max-width: 768px) {
   .experience-heading {
-    font-size: 30px;
+    font-size: 28px;
     text-align: center;
     margin-bottom: 15px;
   }
-  
+
   .experience-heading-sub-text {
-    font-size: 16px;
+    font-size: 15px;
     text-align: center;
     margin-bottom: 30px;
     line-height: 1.4;
     padding: 0 20px;
   }
-  
+
   .experience-container {
     width: 100%;
     padding: 15px;
   }
-  
+
   .experience-cards-div {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -58,18 +58,21 @@
 @media (max-width: 480px) {
   .experience-heading {
     font-size: 24px;
+    margin-bottom: 10px;
   }
-  
+
   .experience-heading-sub-text {
     font-size: 14px;
-    padding: 0 15px;
+    line-height: 1.35;
+    padding: 0 12px;
+    margin-bottom: 24px;
   }
-  
+
   .experience-container {
     width: 100%;
-    padding: 10px;
+    padding: 8px;
   }
-  
+
   .experience-cards-div {
     grid-template-columns: 1fr;
     gap: 1rem;

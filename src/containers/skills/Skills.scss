@@ -56,6 +56,10 @@
   color: $textColor;
 }
 
+.skills-text-subtitle {
+  font-weight: 700;
+}
+
 .skills-list {
   display: grid;
   gap: 10px;
@@ -77,13 +81,14 @@
 
 @media (max-width: 768px) {
   .skills-heading {
-    font-size: 30px;
+    font-size: 28px;
     text-align: center;
     margin-bottom: 20px;
   }
 
   .skills-text-subtitle {
-    font-size: 16px;
+    font-size: 15px;
+    font-weight: 700;
     text-align: center;
     margin-bottom: 30px;
     line-height: 1.4;
@@ -106,7 +111,7 @@
   }
 
   .skills-text {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.5;
     text-align: center;
     margin-bottom: 15px;

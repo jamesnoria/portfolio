@@ -118,6 +118,22 @@
   text-align: center;
 }
 
+.experience-text-details ul {
+  margin: 1.25rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.experience-text-details li {
+  margin-bottom: 0.65rem;
+  color: $textColor;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.experience-text-details li::marker {
+  color: $buttonColor;
+}
+
 .experience-text-details {
   padding: 1.5rem;
   margin-top: 2rem;
@@ -151,49 +167,60 @@
     padding: 0 10px;
     box-sizing: border-box;
   }
-  
+
   .experience-banner {
     height: 9rem;
     margin: 0;
   }
-  
+
   .experience-blurred_div {
     height: 9rem;
     top: 0;
     left: 0;
     width: 100%;
   }
-  
+
   .experience-div-company {
     height: 7rem;
   }
-  
+
   .experience-roundedimg {
     width: 6rem;
     height: 6rem;
     top: 6rem;
   }
-  
+
   .experience-text-role {
-    font-size: 20px;
+    font-size: 18px;
     padding-top: 1rem;
   }
-  
+
   .experience-text-company {
-    font-size: 20px;
+    font-size: 18px;
   }
-  
+
   .experience-text-date {
-    font-size: 16px;
+    font-size: 14px;
   }
-  
+
   .experience-text-desc {
     font-size: 14px;
   }
-  
+
   .experience-text-details {
     padding: 1rem;
     margin-top: 1.5rem;
+  }
+
+  .experience-text-details ul {
+    margin-top: 1rem;
+    padding-left: 1rem;
+  }
+
+  .experience-text-details li {
+    margin-bottom: 0.55rem;
+    font-size: 14px;
+    line-height: 1.45;
   }
 }
 
@@ -206,49 +233,63 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
+
   .experience-banner {
     height: 8rem;
     margin: 0;
   }
-  
+
   .experience-blurred_div {
     height: 8rem;
     top: 0;
     left: 0;
     width: 100%;
   }
-  
+
   .experience-div-company {
     height: 6rem;
   }
-  
+
   .experience-roundedimg {
     width: 5rem;
     height: 5rem;
     top: 5.5rem;
   }
-  
+
   .experience-text-role {
-    font-size: 18px;
-    padding-top: 1.5rem;
+    font-size: 17px;
+    padding-top: 1.25rem;
+    line-height: 1.25;
   }
-  
+
   .experience-text-company {
-    font-size: 18px;
+    font-size: 16px;
     padding: 0.75rem;
   }
-  
+
   .experience-text-date {
-    font-size: 14px;
+    font-size: 13px;
+    padding-top: 0.75rem;
+    line-height: 1.35;
   }
-  
+
   .experience-text-desc {
     font-size: 13px;
   }
-  
+
   .experience-text-details {
-    padding: 0.75rem;
-    margin-top: 1rem;
+    padding: 0.9rem 1rem 1rem;
+    margin-top: 0.9rem;
+  }
+
+  .experience-text-details ul {
+    margin-top: 0.9rem;
+    padding-left: 1rem;
+  }
+
+  .experience-text-details li {
+    margin-bottom: 0.5rem;
+    font-size: 13px;
+    line-height: 1.45;
   }
 }
