@@ -22,15 +22,15 @@ const illustration = {
 const greeting = {
   username: "James Noria",
   title: {
-    en: "Hi, I'm James Noria. I help teams ship reliable software.",
-    es: "Hola, soy James Noria. Ayudo a equipos a entregar software confiable."
+    en: "Hi, I'm James Noria. I build reliable software products.",
+    es: "Hola, soy James Noria. Construyo productos de software confiables."
   },
   subTitle: {
     en: emoji(
-      "Technical Lead and Software Developer with nearly 7 years of experience building reliable products, scalable platforms, and cloud-native systems across different business domains."
+      "Software Developer with nearly 7 years of experience building backend systems, cloud-native platforms, and end-to-end web products with React, Node.js, TypeScript, JavaScript, and Python."
     ),
     es: emoji(
-      "Technical Lead y Software Developer con casi 7 años de experiencia construyendo productos confiables, plataformas escalables y sistemas cloud-native en distintos dominios de negocio."
+      "Software Developer con casi 7 años de experiencia construyendo sistemas backend, plataformas cloud-native y productos web end-to-end con React, Node.js, TypeScript, JavaScript y Python."
     )
   },
   highlights: [
@@ -98,42 +98,42 @@ const skillsSection = {
     es: "Lo que hago"
   },
   subTitle: {
-    en: "Technical Lead and Software Developer building reliable, scalable, business-ready solutions",
-    es: "Technical Lead y Software Developer construyendo soluciones confiables, escalables y listas para el negocio"
+    en: "Backend-leaning Software Developer with full-stack capability across React, Node.js, TypeScript, JavaScript, Python, cloud, and distributed systems",
+    es: "Software Developer con base sólida en backend y capacidad full-stack en React, Node.js, TypeScript, JavaScript, Python, cloud y sistemas distribuidos"
   },
   skills: {
     en: [
       emoji(
-        "💻 Build reliable software for product, platform, integration, and cloud initiatives"
+        "💻 Build reliable backend services, APIs, and business-critical integrations"
       ),
       emoji(
-        "☁️ Deliver cloud-native systems with AWS, Docker, Kubernetes, and serverless tools"
+        "⚛️ Deliver end-to-end web features using React, Node.js, TypeScript, JavaScript, and Python"
       ),
       emoji(
-        "📊 Work across APIs, databases, integrations, observability, and production workloads"
+        "☁️ Design cloud-native solutions with AWS, Docker, Kubernetes, serverless, and event-driven architectures"
       ),
       emoji(
-        "🔄 Improve architecture, code quality, CI/CD, delivery, and reliability"
+        "📊 Work across databases, observability, CI/CD, performance, and production workloads"
       ),
       emoji(
-        "🤝 Lead developers, technical decisions, incident response, and cross-functional delivery"
+        "🤝 Collaborate with product, engineering, and business teams to turn ideas into production-ready software"
       )
     ],
     es: [
       emoji(
-        "💻 Construir software confiable para producto, plataforma, integración y cloud"
+        "💻 Construir servicios backend, APIs e integraciones críticas para el negocio"
       ),
       emoji(
-        "☁️ Entregar sistemas cloud-native con AWS, Docker, Kubernetes y herramientas serverless"
+        "⚛️ Entregar funcionalidades web end-to-end con React, Node.js, TypeScript, JavaScript y Python"
       ),
       emoji(
-        "📊 Trabajar con APIs, bases de datos, integraciones, observabilidad y cargas productivas"
+        "☁️ Diseñar soluciones cloud-native con AWS, Docker, Kubernetes, serverless y arquitecturas event-driven"
       ),
       emoji(
-        "🔄 Mejorar arquitectura, calidad de código, CI/CD, entrega y confiabilidad"
+        "📊 Trabajar con bases de datos, observabilidad, CI/CD, performance y cargas productivas"
       ),
       emoji(
-        "🤝 Liderar desarrolladores, decisiones técnicas, incidentes y entrega cross-functional"
+        "🤝 Colaborar con producto, ingeniería y negocio para convertir ideas en software listo para producción"
       )
     ]
   },
@@ -273,8 +273,8 @@ const workExperiences = {
     es: "Experiencia"
   },
   subtitle: {
-    en: "My professional experience leading technical delivery and building reliable software systems across business-critical initiatives",
-    es: "Mi experiencia profesional liderando entrega técnica y construyendo sistemas de software confiables en iniciativas críticas de negocio"
+    en: "Professional experience building reliable software systems, supporting technical delivery, and collaborating across business-critical initiatives",
+    es: "Experiencia profesional construyendo sistemas de software confiables, apoyando entrega técnica y colaborando en iniciativas críticas de negocio"
   },
   experience: [
     {
@@ -363,13 +363,13 @@ const workExperiences = {
       descBullets: {
         en: [
           "Developed software services and REST APIs for web applications.",
-          "Implemented business logic, database integrations, and third-party service integrations.",
-          "Collaborated with frontend developers and stakeholders to deliver end-to-end features."
+          "Delivered end-to-end web features, connecting user-facing interfaces with backend APIs and business logic.",
+          "Collaborated with frontend developers and stakeholders to align implementation with product needs."
         ],
         es: [
           "Desarrollé servicios de software y APIs REST para aplicaciones web.",
-          "Implementé lógica de negocio, integraciones con bases de datos e integraciones con servicios de terceros.",
-          "Colaboré con desarrolladores frontend y stakeholders para entregar funcionalidades end-to-end."
+          "Entregué funcionalidades web end-to-end, conectando interfaces de usuario con APIs backend y lógica de negocio.",
+          "Colaboré con desarrolladores frontend y stakeholders para alinear la implementación con necesidades de producto."
         ]
       }
     },
@@ -387,12 +387,12 @@ const workExperiences = {
       descBullets: {
         en: [
           "Designed and developed web applications for independent clients and small businesses.",
-          "Developed APIs, database integrations, and responsive user interfaces.",
+          "Built web applications with frontend interfaces, backend APIs, databases, and third-party integrations.",
           "Managed projects from requirements gathering through implementation and deployment."
         ],
         es: [
           "Diseñé y desarrollé aplicaciones web para clientes independientes y pequeñas empresas.",
-          "Desarrollé APIs, integraciones con bases de datos e interfaces responsivas.",
+          "Construí aplicaciones web con interfaces frontend, APIs backend, bases de datos e integraciones con terceros.",
           "Gestioné proyectos desde el levantamiento de requerimientos hasta la implementación y despliegue."
         ]
       }
