@@ -22,10 +22,8 @@ function Header() {
   const [showResumeModal, setShowResumeModal] = useState(false);
 
   const resumeLinks = {
-    spanish:
-      "https://drive.google.com/file/d/1PFmluSdpSuqPLUqIzHOpqXyPil0xR3Ru/view",
-    english:
-      "https://drive.google.com/file/d/1_S1whaW6TUoNAfl0kMiuLhqKbdkaxGbp/view"
+    spanish: "/SPA%20James-Noria-Senior-Software-Engineer-FullStack-CV.pdf",
+    english: "/ENG%20James-Noria-Senior-Software-Engineer-FullStack-CV.pdf"
   };
 
   const viewExperience = workExperiences.display;

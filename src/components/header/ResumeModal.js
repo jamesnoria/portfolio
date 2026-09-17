@@ -36,7 +36,7 @@ const ResumeModal = ({show, onClose, resumeLinks}) => {
           >
             {t("spanish")}
             <span className="download-symbol" aria-hidden="true">
-              ↓
+              ↗
             </span>
           </a>
           <a
@@ -47,7 +47,7 @@ const ResumeModal = ({show, onClose, resumeLinks}) => {
           >
             {t("english")}
             <span className="download-symbol" aria-hidden="true">
-              ↓
+              ↗
             </span>
           </a>
         </div>

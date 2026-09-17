@@ -70,8 +70,7 @@ const greeting = {
       }
     }
   ],
-  resumeLink:
-    "https://drive.google.com/file/d/1PFmluSdpSuqPLUqIzHOpqXyPil0xR3Ru/view", // Set to empty to hide the button
+  resumeLink: "/SPA%20James-Noria-Senior-Software-Engineer-FullStack-CV.pdf", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 

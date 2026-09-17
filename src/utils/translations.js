@@ -7,12 +7,12 @@ export const navigationTranslations = {
     resume: "Resume",
     contactMe: "Contact Me",
     contactMeBtn: "Contact me",
-    downloadResume: "Download my resume",
+    downloadResume: "View my CV",
 
     // Resume Modal
-    downloadResumeTitle: "Download Resume",
-    spanish: "Spanish",
-    english: "English",
+    downloadResumeTitle: "View CV",
+    spanish: "Spanish CV",
+    english: "English CV",
     close: "Close"
   },
   es: {
@@ -22,12 +22,12 @@ export const navigationTranslations = {
     resume: "Currículum",
     contactMe: "Contáctame",
     contactMeBtn: "Contáctame",
-    downloadResume: "Descargar mi currículum",
+    downloadResume: "Ver mi CV",
 
     // Resume Modal
-    downloadResumeTitle: "Descargar Currículum",
-    spanish: "Español",
-    english: "Inglés",
+    downloadResumeTitle: "Ver CV",
+    spanish: "CV en Español",
+    english: "CV en Inglés",
     close: "Cerrar"
   }
 };
